@@ -1,0 +1,244 @@
+﻿@{
+	var reportId = ViewBag.Id == null ? "" : ViewBag.Id;
+	var theme = ViewBag.Theme;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ActiveReports Web Designer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- No Virtual Directory -->
+	<base href="/">
+
+	<!-- For Virtual Directory -->
+	<!--<base href="/VirtualDirectoryName/">-->
+
+	<link rel="stylesheet" href="vendor/css/materialdesignicons.min.css" media="all" type="text/css" />
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="vendor/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="vendor/css/ionicons.min.css">
+	<link rel="stylesheet" href="vendor/css/fonts-googleapis.css" type="text/css" />
+	<link rel="stylesheet" href="file-dialog.css" />
+	<link rel="stylesheet" href="data-set-picker.css" />
+	<link rel="stylesheet" href="file-view.css" />
+	<link rel="stylesheet" href="viewer-container.css" />
+	<link rel="stylesheet" href="ar-datasource-editor.css"/>
+	<link rel="stylesheet" href="web-designer.css" />
+
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+	<link rel="shortcut icon" href="icons/favicon.ico" />
+
+</head>
+<body class="theme-@(theme)">
+	<script src="vendor/js/jquery.min.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<script src="baseServerApi.js"></script>
+	<script src="file-dialog.js"></script>
+	<script src="data-set-picker.js"></script>
+	<script src="file-view.js"></script>
+	<script src="viewer-container.js"></script>
+	<script src="ar-datasource-editor.js"></script>
+	<script src="web-designer.js"></script>
+
+	<div id="designer-id" style="width: 100%; height: 100%;"></div>
+	<div id="file-view-id" style="width: 100%; height: 100%; display: none;"></div>
+	<div id="viewer-container-id" class="theme-default" style="width: 100%; height: 100%; display: none;"></div>
+	<div id="save-as-dialog-id" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; z-index: 9999;"></div>
+	<div id="data-set-picker-dialog-id" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;z-index: 9999;background-color: #dedede;"></div>
+	<div id="data-source-editor-dialog-id"></div>
+
+	<script>
+
+		var showElement = function (id) {
+			if (!id) return;
+			($('#' + id)).css('display', 'block');
+		};
+
+		var hideElement = function (id) {
+			if (!id) return;
+			($('#' + id)).css('display', 'none');
+		};
+
+		var designerId = 'designer-id';
+		var fileViewId = 'file-view-id';
+		var viewerContainerId = 'viewer-container-id';
+		var saveAsDialogId = 'save-as-dialog-id';
+		var dataSetPickerDialogId = 'data-set-picker-dialog-id';
+		var dataSourceEditorDialogId = 'data-source-editor-dialog-id';
+		var dialogs = [
+			saveAsDialogId,
+			dataSetPickerDialogId, dataSourceEditorDialogId,
+		];
+
+		var hideDialogs = function () {
+			dialogs.forEach(hideElement);
+		}
+
+		var showDesigner = function () {
+			var info = GrapeCity.ActiveReports.WebDesigner.api.getReportInfo();
+			var isDirty = GrapeCity.ActiveReports.WebDesigner.api.isReportDirty();
+			document.title = info.name + (isDirty ? ' *' : '');
+			showElement(designerId);
+			GrapeCity.ActiveReports.WebDesigner.focus();
+		};
+
+		var showViewer = function () {
+			showElement(viewerContainerId);
+			hideElement(designerId);
+		};
+
+		function onSave(options) {
+			GrapeCity.ActiveReports.WebDesigner.api.saveReport({
+				reportInfo: {
+					id: options.reportInfo.id,
+					name: options.reportInfo.name,
+				},
+			});
+		}
+
+		function onSaveAs(options) {
+			showElement(saveAsDialogId);
+
+			fileDialog.createSaveReportAsDialog(saveAsDialogId, {
+				api: {
+					getReportsList: function() {
+						return baseServerApi.getReportsList().then(function(reportsList) {
+							return reportsList.map(function(reportInfo) {
+								return { path: reportInfo.Name };
+							});
+						});
+					},
+					saveReport: function(saveOptions) {
+						return baseServerApi.saveNewReport({ name: saveOptions.path, content: options.reportInfo.content }).then(function (saveResult) {
+							return { id: saveResult.Id };
+						});
+					},
+				},
+				locale: options.locale,
+				reportInfo: {
+					path: options.reportInfo.name,
+				},
+				onSuccess: function (saveResult) {
+					hideElement(saveAsDialogId);
+					options.onSuccess({ id: saveResult.id, name: saveResult.path });
+				},
+				onClose: function () {
+					hideElement(saveAsDialogId);
+					showDesigner();
+				},
+			});
+		}
+
+		var makeOptions = function (baseOptions, additionalOptions) {
+			return $.extend({}, baseOptions || {}, additionalOptions || {});
+		}
+
+		var designerOptions = GrapeCity.ActiveReports.WebDesigner.createDesignerOptions(baseServerApi);
+		designerOptions.reportInfo = '@reportId' ? { id: '@reportId' } : null;
+
+		// Used in About dialog and File View Help tab.
+		designerOptions.documentation.home = 'https://help.grapecity.com/activereports/webhelp/AR14WebDesigner/webframe.html';
+		// Used in notifications about report items transformation.
+		designerOptions.documentation.reportItemsTransformation = 'https://help.grapecity.com/activereports/webhelp/AR14WebDesigner/SupportedControls.html';
+		
+		designerOptions.reportItemsFeatures.table.autoFillFooter = true;
+
+		designerOptions.saveButton.visible = true;
+		designerOptions.onSave = onSave;
+
+		designerOptions.saveAsButton.visible = true;
+		designerOptions.onSaveAs = onSaveAs;
+
+		designerOptions.openFileView = function (options) {
+			hideElement(designerId);
+			showElement(fileViewId);
+
+			var fileViewOptions = makeOptions(options, {
+				onClose: function () {
+					if (options.onClose) options.onClose();
+					hideElement(fileViewId);
+					showDesigner();
+				},
+				serverApi: {
+					getReportsList: baseServerApi.getReportsList,
+					getReportRevisions: baseServerApi.getReportRevisions,
+					getDataSetsList: baseServerApi.getDataSetsList,
+					getTemplatesList: baseServerApi.getTemplatesList,
+					getTemplateContent: baseServerApi.getTemplateContent,
+					getTemplateThumbnail: baseServerApi.getTemplateThumbnail,
+				},
+				createReport: GrapeCity.ActiveReports.WebDesigner.api.createReport,
+				openReport: GrapeCity.ActiveReports.WebDesigner.api.openReport,
+				saveReport: GrapeCity.ActiveReports.WebDesigner.api.saveReport,
+			});
+
+			fileView.renderFileView(fileViewId, fileViewOptions);
+		};
+
+		designerOptions.openViewer = function (options) {
+			hideElement(designerId);
+			showElement(viewerContainerId);
+
+			var viewerContainerOptions = makeOptions(options, {
+				makeViewerUrl: function () {
+					var baseUrl = 'preview/';
+					var reportId = encodeURIComponent(options.reportInfo.id);
+					var themeName = '@theme' || 'blue';
+					return baseUrl + reportId + '?theme=' + themeName;
+				},
+			});
+			viewerContainer.renderViewerContainer(viewerContainerId, viewerContainerOptions, function () {
+				var isTemporaryReport = options.reportInfo.isTemporary;
+				if (isTemporaryReport) {
+					var reportId = options.reportInfo.id;
+					baseServerApi.deleteTemporaryReport({ id: reportId });
+				}
+				hideElement(viewerContainerId);
+				showDesigner();
+			});
+		};
+
+		designerOptions.dataTab.dataSets.canModify = true;
+		designerOptions.dataSetPicker.open = function (options) {
+			var openInPanel = options.mode === 'Panel';
+			if (!openInPanel) {
+				hideDialogs();
+				showElement(dataSetPickerDialogId);
+			}
+			dataSetPicker.renderDataSetPicker(openInPanel ? options.elementId : dataSetPickerDialogId, makeOptions(options, {
+				serverApi: {
+					getDataSetsList: baseServerApi.getDataSetsList,
+					getDataSourcesAndDataSets: baseServerApi.getDataSourcesAndDataSets,
+				},
+				onClose: function () {
+					options.onClose();
+					if (!openInPanel) hideElement(dataSetPickerDialogId);
+					dataSetPicker.dispose();
+					showDesigner();
+				}
+			}));
+		};
+		designerOptions.dataSetPicker.close = function () {
+			dataSetPicker.dispose();
+		};
+
+		designerOptions.dataTab.dataSources.canModify = true;
+		ARDataSourceEditor.init(dataSourceEditorDialogId);
+		designerOptions.openDataSourceEditor = function(options) {
+			ARDataSourceEditor.open(makeOptions(options, {
+				serverApi: {
+					testConnection: baseServerApi.testDataSourceConnection,
+				},
+			}));
+		};
+
+		GrapeCity.ActiveReports.WebDesigner.renderApplication(designerId, designerOptions);
+
+	</script>
+</body>
+</html>

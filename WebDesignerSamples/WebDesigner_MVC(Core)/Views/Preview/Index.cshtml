@@ -1,0 +1,330 @@
+﻿@{
+	var reportId = ViewBag.Id == null ? "" : ViewBag.Id;
+	var theme = ViewBag.Theme;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ActiveReports Web Designer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- No Virtual Directory -->
+	<base href="/">
+
+	<!-- For Virtual Directory -->
+	<!--<base href="/VirtualDirectoryName/">-->
+
+	<link rel="stylesheet" href="vendor/css/materialdesignicons.min.css" media="all" type="text/css" />
+	<link rel="stylesheet" href="vendor/css/fonts-googleapis.css" type="text/css" />
+	<link rel="stylesheet" href="jsViewer.min.css" />
+
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+	<link rel="shortcut icon" href="icons/favicon.ico" />
+
+</head>
+<body class="theme-@(theme)">
+	<div id="viewer-id" style="width: 100%; height: 100%;">
+		<style type="text/css">
+			*{
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box
+			}
+			
+			.reportPage {
+				background-color:#fff;
+				overflow:hidden
+			}
+			
+			.canvasItem {
+				line-height:normal
+			}
+			
+			.canvasItem, .itemContent {
+				position:absolute
+			}
+			
+			.listItem, .section {
+				position:relative
+			}
+			
+			.placeItem {
+				position:absolute;
+				z-index:inherit
+			}
+			
+			.tableItem {
+				border-collapse:collapse;
+				table-layout:fixed
+			}
+			
+			.tableCell {
+				padding:0;
+				vertical-align:top;
+			}
+			
+			@@-moz-document url-prefix() {
+				.tableCell {
+					height:100%
+				}
+			}
+			
+			.cellContent {
+				position:relative;
+				height:100%;
+				overflow:hidden
+			}
+			
+			.cbChecked, .cbUnchecked {
+				width:12px;
+				height:12px;
+				flex-basis:12px;
+				font-size:10px;
+				border-width:1px;
+				border-style:solid;
+				text-align:center;
+				flex-grow:0;
+				flex-shrink:0
+			}
+			
+			.cbChecked:after {
+				content:"\2714";
+				vertical-align:top
+			}
+			
+			.cbCommon {
+				width:100%;
+				height:100%;
+				overflow:hidden;
+				display:flex;
+				flex-direction:column;
+				justify-content:flex-start;
+				align-items:center;
+				text-align:center
+			}
+			
+			.cbTopLeft {
+				align-items:flex-start;
+				text-align:left
+			}
+			
+			.cbTopRight {
+				align-items:flex-end;
+				text-align:right
+			}
+			
+			.cbMiddleLeft {
+				flex-direction:row;
+				text-align:left
+			}
+			
+			.cbMiddleCenter {
+				flex-direction:row;
+				justify-content:center
+			}
+			
+			.cbMiddleRight {
+				flex-direction:row-reverse;
+				text-align:right
+			}
+			
+			.cbBottomLeft{
+				align-items:flex-start;
+				text-align:left
+			}
+			
+			.cbBottomCenter, .cbBottomLeft, .cbBottomRight {
+				flex-direction:column-reverse
+			}
+			
+			.cbBottomRight {
+				align-items:flex-end;
+				text-align:right
+			}
+			
+			.cbTextCommon {
+				width:100%
+			}
+			
+			.cbTextBottomLeft, .cbTextTopLeft {
+				padding-left:14px
+			}
+			
+			.cbTextBottomRight, .cbTextTopRight {
+				padding-right:14px
+			}
+			
+			.cbTextMiddleLeft {
+				padding-left:2px;
+				width:calc(100% - 2px)
+			}
+			
+			.cbTextMiddleCenter {
+				position:absolute
+			}
+			
+			.cbTextMiddleRight {
+				padding-right:2px;
+				width:calc(100% - 2px)
+			}
+			
+			.textBoxItem {
+				display:flex;
+				position:absolute
+			}
+			
+			.textBoxContent {
+				width:100%;
+				max-height:100%;
+				overflow:hidden;
+				text-decoration:inherit
+			}
+			
+			.hideOverflow {
+				overflow:hidden
+			}
+			
+			.action {
+				cursor:pointer;
+				text-decoration:inherit
+			}
+			
+			.action.toggle {
+				font-size:75%
+			}
+			
+			.action.toggle.expanded:after {
+				content:"\2795"
+			}
+			
+			.action.toggle.collapsed:after {
+				content:"\2796"
+			}
+			
+			.tocLevelLabel, .tocLevelNumber {
+				float:left;
+				text-decoration:inherit
+			}
+			
+			.tocLevelNumber {
+				text-align:left
+			
+			}
+			
+			.tocPageNumber {
+				float:right;
+				text-decoration:inherit
+			}
+			
+			.tocPageNumberNoFill {
+				float:left;
+				padding-left:2pt;
+				text-decoration:inherit
+			}
+			
+			.bordersItem {
+				pointer-events:none
+			}
+			
+			.errorMessage {
+				font-size:10pt;
+				color:#000;
+				padding:2pt
+			
+			}
+			
+			.gcdv-tooltip {
+				position:absolute;
+				z-index:1000;
+				top:0;
+				left:0;
+				pointer-events:none;
+				max-width:400px;
+				padding:6px;
+				background-color:#ffffe5;
+				border:1px solid rgba(0,0,0,.1);
+				border-radius:6px;
+				box-shadow:0 6px 12px rgba(0,0,0,.175);
+				box-sizing:border-box
+			}
+			
+			.spinner {
+				position: fixed;
+				top: calc(50% - 9px);
+				left: calc(50% - 35px);
+				width: 70px;
+				text-align: center;
+			}
+
+			#root {
+				background-color: #e5e5e5;
+			}
+
+			.spinner > div {
+				width: 18px;
+				height: 18px;
+				background-color: #333;
+				border-radius: 100%;
+				display: inline-block;
+				-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+				animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+			}
+
+			.spinner .bounce1 {
+				-webkit-animation-delay: -0.32s;
+				animation-delay: -0.32s;
+			}
+
+			.spinner .bounce2 {
+				-webkit-animation-delay: -0.16s;
+				animation-delay: -0.16s;
+			}
+
+			@@-webkit-keyframes sk-bouncedelay {
+				0%, 80%, 100% {
+					-webkit-transform: scale(0)
+				}
+
+				40% {
+					-webkit-transform: scale(1.0)
+				}
+			}
+
+			@@keyframes sk-bouncedelay {
+				0%, 80%, 100% {
+					-webkit-transform: scale(0);
+					transform: scale(0);
+				}
+
+				40% {
+					-webkit-transform: scale(1.0);
+					transform: scale(1.0);
+				}
+			}
+		</style>
+
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+	<script src="jsViewer.min.js"></script>
+	<script type="text/javascript">
+		GrapeCity.ActiveReports.JSViewer.create({
+			element: '#viewer-id',
+			reportService: {
+				url: 'api/reporting',
+			},
+			reportID: '@reportId',
+			settings: {
+				zoomType: 'FitPage'
+			},
+		});
+	</script>
+</body>
+</html>

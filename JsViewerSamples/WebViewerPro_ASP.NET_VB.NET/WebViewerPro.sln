@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebViewerPro", "WebViewerPro.vbproj", "{B76F0B07-DAAA-438D-8B96-AE57E3B44A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B76F0B07-DAAA-438D-8B96-AE57E3B44A6B}.Debug|x86.ActiveCfg = Debug|x86
+		{B76F0B07-DAAA-438D-8B96-AE57E3B44A6B}.Debug|x86.Build.0 = Debug|x86
+		{B76F0B07-DAAA-438D-8B96-AE57E3B44A6B}.Release|x86.ActiveCfg = Release|x86
+		{B76F0B07-DAAA-438D-8B96-AE57E3B44A6B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FA48030-F075-4DB5-A818-D87E87CADEBE}
+	EndGlobalSection
+EndGlobal

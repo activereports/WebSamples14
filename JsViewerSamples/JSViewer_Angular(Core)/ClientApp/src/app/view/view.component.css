@@ -1,0 +1,21 @@
+:host {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 767px) {
+    :host {
+        height: calc(100vh - 60px);
+    }
+}
+
+report-viewer {
+    display: flex;
+    flex-grow: 1;
+	height: 0;
+}
+
+.navbar-default {
+    flex-shrink: 0;
+}
