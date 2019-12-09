@@ -390,6 +390,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="ar-webviewer-locale.json" />
     <None Include="PageReports\Invoice_Grouped.rdlx" />
     <None Include="PageReports\PurchaseReport.rdlx" />
     <None Include="RdlReports\SalesReceipt.rdlx" />
