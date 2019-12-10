@@ -188,7 +188,7 @@ export class HomeComponent implements OnInit {
       reportService: {
         url: 'api/reporting',
       },
-      reportID: options.reportInfo.id,
+      reportID: unescape(options.reportInfo.id),
       settings: {
         zoomType: 'FitPage'
       },
