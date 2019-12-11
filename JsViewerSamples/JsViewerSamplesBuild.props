@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <JsViewerVersion>14.0.1381-beta</JsViewerVersion>
-    <ArVersion>14.0.18985-beta</ArVersion>
-    <ArCoreVersion>1.5.3000-beta-2699</ArCoreVersion>
+    <JsViewerVersion>14.0.1429</JsViewerVersion>
+    <ArVersion>14.0.19026</ArVersion>
+    <ArCoreVersion>1.5.3000</ArCoreVersion>
     <DataEngineVersion>2.0.183</DataEngineVersion>
     <GcDocVersion>2.2.0.319</GcDocVersion>
     <DataVisualizationVersion>0.1.226</DataVisualizationVersion>
