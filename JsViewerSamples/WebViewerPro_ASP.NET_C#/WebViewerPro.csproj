@@ -326,14 +326,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ar-webviewer-locale.json" />
-    <None Include="PageReports\Invoice_Grouped.rdlx" />
-    <None Include="PageReports\PurchaseReport.rdlx" />
-    <None Include="RdlReports\SalesReceipt.rdlx" />
-    <None Include="RpxReports\Invoice.rpx" />
-    <None Include="RpxReports\InvoiceFiltered.rpx" />
-    <None Include="RpxReports\NwindLabels.rpx" />
-    <None Include="RpxReports\NwindLabelsFiltered.rpx" />
-    <None Include="RpxReports\Params.rpx" />
+    <Content Include="PageReports\Invoice_Grouped.rdlx" />
+    <Content Include="PageReports\PurchaseReport.rdlx" />
+    <Content Include="RdlReports\SalesReceipt.rdlx" />
+    <Content Include="RpxReports\Invoice.rpx" />
+    <Content Include="RpxReports\InvoiceFiltered.rpx" />
+    <Content Include="RpxReports\NwindLabels.rpx" />
+    <Content Include="RpxReports\NwindLabelsFiltered.rpx" />
+    <Content Include="RpxReports\Params.rpx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
