@@ -6,8 +6,8 @@
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
-        "@grapecity/ar-viewer": "14.0.1381-beta",
-        "@grapecity/ar-designer": "14.0.602-beta",
+        "@grapecity/ar-viewer": "14.0.1429",
+        "@grapecity/ar-designer": "14.0.637",
         "ncp": "^2.0.0"
     },
     "scripts": {
