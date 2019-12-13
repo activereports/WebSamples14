@@ -335,6 +335,16 @@
     <Content Include="RpxReports\NwindLabelsFiltered.rpx" />
     <Content Include="RpxReports\Params.rpx" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="PageReports\Invoice_Grouped.csv" />
+    <Content Include="PageReports\PurchaseReport.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RdlReports\SalesReceipt.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RdlReports\Reels.rdlx-theme" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
