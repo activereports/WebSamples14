@@ -399,6 +399,10 @@
     <Content Include="RpxReports\NwindLabels.rpx" />
     <Content Include="RpxReports\NwindLabelsFiltered.rpx" />
     <Content Include="RpxReports\Params.rpx" />
+    <Content Include="PageReports\Invoice_Grouped.csv" />
+    <Content Include="PageReports\PurchaseReport.csv" />
+    <Content Include="RdlReports\SalesReceipt.csv" />
+    <Content Include="RdlReports\Reels.rdlx-theme" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
