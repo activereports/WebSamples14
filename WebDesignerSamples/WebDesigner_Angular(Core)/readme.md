@@ -20,7 +20,7 @@ Angular requires [Node.js](https://nodejs.org) 8.x or 10.x.
 3. Right-click the solution in Solution Explorer and select **Restore NuGet
    Packages**.
 4. Press Ctrl+Shift+B, or select **Build → Build Solution**.
-5. Open Command Prompt and go to the JSViewer_Angular(Core)\ClientApp folder.
+5. Open Command Prompt and go to the WebDesigner_Angular(Core)\ClientApp folder.
 6. Run the `npm install` command.
 
 ## Run the sample
