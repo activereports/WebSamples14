@@ -285,7 +285,7 @@
 								<Value>
 									<Field fieldType="Simple">
 										<Value>
-											<FieldItem>=Fields!product_item.Value</FieldItem>
+											<FieldItem>=Fields!productItem.Value</FieldItem>
 										</Value>
 									</Field>
 									<Aggregate>Count</Aggregate>
@@ -295,7 +295,7 @@
 								<Detail>
 									<Field>
 										<Value>
-											<FieldItem>=Fields!product_category.Value</FieldItem>
+											<FieldItem>=Fields!productCategory.Value</FieldItem>
 										</Value>
 									</Field>
 									<Group>Stack</Group>
@@ -311,7 +311,7 @@
 							<Color>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!product_category.Value</FieldItem>
+										<FieldItem>=Fields!productCategory.Value</FieldItem>
 									</Value>
 								</Field>
 							</Color>
@@ -629,7 +629,7 @@
 								<Value>
 									<Field fieldType="Simple">
 										<Value>
-											<FieldItem>=Count(Fields!product_item.Value)</FieldItem>
+											<FieldItem>=Count(Fields!productItem.Value)</FieldItem>
 										</Value>
 									</Field>
 								</Value>
@@ -638,7 +638,7 @@
 								<Detail>
 									<Field>
 										<Value>
-											<FieldItem>=Fields!purchase_method.Value</FieldItem>
+											<FieldItem>=Fields!purchaseMethod.Value</FieldItem>
 										</Value>
 									</Field>
 									<SortingField>=""</SortingField>
@@ -655,7 +655,7 @@
 							<Color>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!purchase_method.Value</FieldItem>
+										<FieldItem>=Fields!purchaseMethod.Value</FieldItem>
 									</Value>
 								</Field>
 							</Color>
@@ -957,7 +957,7 @@
 								<Value>
 									<Field fieldType="Simple">
 										<Value>
-											<FieldItem>=Sum(Fields!order_price.Value)</FieldItem>
+											<FieldItem>=Sum(Fields!orderPrice.Value)</FieldItem>
 										</Value>
 									</Field>
 								</Value>
@@ -966,7 +966,7 @@
 								<Detail>
 									<Field>
 										<Value>
-											<FieldItem>=Fields!payment_method.Value</FieldItem>
+											<FieldItem>=Fields!paymentMethod.Value</FieldItem>
 										</Value>
 									</Field>
 									<Group>Stack</Group>
@@ -984,7 +984,7 @@
 							<Color>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!payment_method.Value</FieldItem>
+										<FieldItem>=Fields!paymentMethod.Value</FieldItem>
 									</Value>
 								</Field>
 							</Color>
@@ -1321,7 +1321,7 @@
 								<Value>
 									<Field fieldType="Simple">
 										<Value>
-											<FieldItem>=Fields!customer_age.Value</FieldItem>
+											<FieldItem>=Fields!customerAge.Value</FieldItem>
 										</Value>
 									</Field>
 									<Aggregate>Average</Aggregate>
@@ -1341,7 +1341,7 @@
 							<Category>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!product_category.Value</FieldItem>
+										<FieldItem>=Fields!productCategory.Value</FieldItem>
 									</Value>
 								</Field>
 								<SortingField>=""</SortingField>
@@ -1682,7 +1682,7 @@
 								<Value>
 									<Field fieldType="Simple">
 										<Value>
-											<FieldItem>=Fields!order_price.Value</FieldItem>
+											<FieldItem>=Fields!orderPrice.Value</FieldItem>
 										</Value>
 									</Field>
 									<Aggregate>Average</Aggregate>
@@ -1692,7 +1692,7 @@
 								<Detail>
 									<Field>
 										<Value>
-											<FieldItem>=Fields!payment_method.Value</FieldItem>
+											<FieldItem>=Fields!paymentMethod.Value</FieldItem>
 										</Value>
 									</Field>
 									<SortingField>=""</SortingField>
@@ -1701,7 +1701,7 @@
 							<Category>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!product_category.Value</FieldItem>
+										<FieldItem>=Fields!productCategory.Value</FieldItem>
 									</Value>
 								</Field>
 								<SortingField>=""</SortingField>
@@ -1709,7 +1709,7 @@
 							<Color>
 								<Field>
 									<Value>
-										<FieldItem>=Fields!payment_method.Value</FieldItem>
+										<FieldItem>=Fields!paymentMethod.Value</FieldItem>
 									</Value>
 								</Field>
 							</Color>
@@ -1721,7 +1721,7 @@
 							<Size>
 								<Field>
 									<Value>
-										<FieldItem>=Count(Fields!product_item.Value)</FieldItem>
+										<FieldItem>=Count(Fields!productItem.Value)</FieldItem>
 									</Value>
 								</Field>
 							</Size>
@@ -1963,8 +1963,6708 @@
 	<DataSources>
 		<DataSource Name="AcmeStore">
 			<ConnectionProperties>
-				<ConnectString>Path=AcmeStore.csv;Locale=en-US;TextQualifier=";ColumnsSeparator=,;RowsSeparator=\r\n;HasHeaders=True</ConnectString>
-				<DataProvider>CSV</DataProvider>
+				<ConnectString>jsondata=[
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 135,
+    "productItem": "Aute",
+    "productCategory": "Electronics",
+    "customerAge": 64,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 59,
+    "productItem": "Dolore",
+    "productCategory": "Transport",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 88,
+    "productItem": "Eiusmod",
+    "productCategory": "Food",
+    "customerAge": 47,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 39,
+    "productItem": "Exercitation",
+    "productCategory": "Food",
+    "customerAge": 33,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 26,
+    "productItem": "Ex",
+    "productCategory": "Food",
+    "customerAge": 15,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 77,
+    "productItem": "Sit",
+    "productCategory": "Sport",
+    "customerAge": 64,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 86,
+    "productItem": "Do",
+    "productCategory": "Tools",
+    "customerAge": 35,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 14,
+    "productItem": "Nostrud",
+    "productCategory": "Food",
+    "customerAge": 32,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 70,
+    "productItem": "Consequat",
+    "productCategory": "Jewelry",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 113,
+    "productItem": "Lorem",
+    "productCategory": "Transport",
+    "customerAge": 40,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2016,
+    "orderPrice": 17,
+    "productItem": "Occaecat",
+    "productCategory": "Sport",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 70,
+    "productItem": "Aute",
+    "productCategory": "Transport",
+    "customerAge": 47,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 14,
+    "productItem": "Commodo",
+    "productCategory": "Fashion",
+    "customerAge": 24,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 108,
+    "productItem": "Non",
+    "productCategory": "Tools",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 83,
+    "productItem": "Esse",
+    "productCategory": "Transport",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 91,
+    "productItem": "Excepteur",
+    "productCategory": "Transport",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 88,
+    "productItem": "Cillum",
+    "productCategory": "Sport",
+    "customerAge": 23,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2017,
+    "orderPrice": 9,
+    "productItem": "Cupidatat",
+    "productCategory": "Toys",
+    "customerAge": 43,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 40,
+    "productItem": "Dolore",
+    "productCategory": "Sport",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 5,
+    "productItem": "Pariatur",
+    "productCategory": "Food",
+    "customerAge": 66,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 108,
+    "productItem": "Enim",
+    "productCategory": "Sport",
+    "customerAge": 35,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 76,
+    "productItem": "Commodo",
+    "productCategory": "Electronics",
+    "customerAge": 51,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 87,
+    "productItem": "Consequat",
+    "productCategory": "Jewelry",
+    "customerAge": 17,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 66,
+    "productItem": "Ullamco",
+    "productCategory": "Tools",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 67,
+    "productItem": "Sunt",
+    "productCategory": "Sport",
+    "customerAge": 41,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 49,
+    "productItem": "Labore",
+    "productCategory": "Toys",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 84,
+    "productItem": "Incididunt",
+    "productCategory": "Transport",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2018,
+    "orderPrice": 86,
+    "productItem": "Elit",
+    "productCategory": "Food",
+    "customerAge": 24,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 127,
+    "productItem": "Enim",
+    "productCategory": "Fashion",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 93,
+    "productItem": "Adipisicing",
+    "productCategory": "Transport",
+    "customerAge": 46,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 75,
+    "productItem": "Deserunt",
+    "productCategory": "Fashion",
+    "customerAge": 57,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 72,
+    "productItem": "Tempor",
+    "productCategory": "Sport",
+    "customerAge": 49,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 96,
+    "productItem": "Enim",
+    "productCategory": "Fashion",
+    "customerAge": 15,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 91,
+    "productItem": "Quis",
+    "productCategory": "Sport",
+    "customerAge": 24,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 69,
+    "productItem": "Elit",
+    "productCategory": "Toys",
+    "customerAge": 53,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 131,
+    "productItem": "Proident",
+    "productCategory": "Tools",
+    "customerAge": 44,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 72,
+    "productItem": "Adipisicing",
+    "productCategory": "Jewelry",
+    "customerAge": 44,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Las Vegas",
+    "year": 2019,
+    "orderPrice": 54,
+    "productItem": "Ipsum",
+    "productCategory": "Food",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 30,
+    "productItem": "Ipsum",
+    "productCategory": "Healthcare",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 134,
+    "productItem": "Culpa",
+    "productCategory": "Toys",
+    "customerAge": 58,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 42,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 37,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 118,
+    "productItem": "Proident",
+    "productCategory": "Tools",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 44,
+    "productItem": "Duis",
+    "productCategory": "Sport",
+    "customerAge": 62,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 113,
+    "productItem": "Eu",
+    "productCategory": "Fashion",
+    "customerAge": 24,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 34,
+    "productItem": "Minim",
+    "productCategory": "Services",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 86,
+    "productItem": "Aliqua",
+    "productCategory": "Food",
+    "customerAge": 67,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2016,
+    "orderPrice": 99,
+    "productItem": "Deserunt",
+    "productCategory": "Food",
+    "customerAge": 59,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 113,
+    "productItem": "Irure",
+    "productCategory": "Sport",
+    "customerAge": 59,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 115,
+    "productItem": "Aliquip",
+    "productCategory": "Toys",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 89,
+    "productItem": "Minim",
+    "productCategory": "Fashion",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 119,
+    "productItem": "Ex",
+    "productCategory": "Healthcare",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 68,
+    "productItem": "Incididunt",
+    "productCategory": "Tools",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 52,
+    "productItem": "Enim",
+    "productCategory": "Food",
+    "customerAge": 21,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 61,
+    "productItem": "Exercitation",
+    "productCategory": "Healthcare",
+    "customerAge": 59,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 132,
+    "productItem": "Ad",
+    "productCategory": "Food",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 138,
+    "productItem": "Dolore",
+    "productCategory": "Jewelry",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2017,
+    "orderPrice": 73,
+    "productItem": "Aliqua",
+    "productCategory": "Toys",
+    "customerAge": 37,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 43,
+    "productItem": "Excepteur",
+    "productCategory": "Food",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 96,
+    "productItem": "Aliqua",
+    "productCategory": "Food",
+    "customerAge": 26,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 66,
+    "productItem": "Anim",
+    "productCategory": "Sport",
+    "customerAge": 61,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 76,
+    "productItem": "Sit",
+    "productCategory": "Services",
+    "customerAge": 65,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 139,
+    "productItem": "Qui",
+    "productCategory": "Services",
+    "customerAge": 21,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 12,
+    "productItem": "Mollit",
+    "productCategory": "Food",
+    "customerAge": 48,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 136,
+    "productItem": "Tempor",
+    "productCategory": "Fashion",
+    "customerAge": 15,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 129,
+    "productItem": "Adipisicing",
+    "productCategory": "Transport",
+    "customerAge": 41,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2018,
+    "orderPrice": 125,
+    "productItem": "Aute",
+    "productCategory": "Fashion",
+    "customerAge": 43,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 39,
+    "productItem": "Incididunt",
+    "productCategory": "Fashion",
+    "customerAge": 35,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 133,
+    "productItem": "Adipisicing",
+    "productCategory": "Food",
+    "customerAge": 56,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 41,
+    "productItem": "Exercitation",
+    "productCategory": "Healthcare",
+    "customerAge": 20,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 111,
+    "productItem": "Pariatur",
+    "productCategory": "Tools",
+    "customerAge": 17,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 138,
+    "productItem": "Exercitation",
+    "productCategory": "Tools",
+    "customerAge": 45,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 103,
+    "productItem": "Veniam",
+    "productCategory": "Healthcare",
+    "customerAge": 40,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 38,
+    "productItem": "Exercitation",
+    "productCategory": "Toys",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 89,
+    "productItem": "Nisi",
+    "productCategory": "Sport",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Miami",
+    "year": 2019,
+    "orderPrice": 36,
+    "productItem": "Tempor",
+    "productCategory": "Transport",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 30,
+    "productItem": "Adipisicing",
+    "productCategory": "Jewelry",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 63,
+    "productItem": "Reprehenderit",
+    "productCategory": "Fashion",
+    "customerAge": 36,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 77,
+    "productItem": "Officia",
+    "productCategory": "Healthcare",
+    "customerAge": 54,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 17,
+    "productItem": "Nulla",
+    "productCategory": "Services",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 135,
+    "productItem": "Aliquip",
+    "productCategory": "Jewelry",
+    "customerAge": 55,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 37,
+    "productItem": "Occaecat",
+    "productCategory": "Electronics",
+    "customerAge": 70,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2016,
+    "orderPrice": 125,
+    "productItem": "Id",
+    "productCategory": "Electronics",
+    "customerAge": 52,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 133,
+    "productItem": "Cupidatat",
+    "productCategory": "Sport",
+    "customerAge": 69,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 58,
+    "productItem": "Labore",
+    "productCategory": "Healthcare",
+    "customerAge": 43,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 19,
+    "productItem": "Ea",
+    "productCategory": "Tools",
+    "customerAge": 40,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 27,
+    "productItem": "Amet",
+    "productCategory": "Electronics",
+    "customerAge": 67,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 58,
+    "productItem": "Occaecat",
+    "productCategory": "Fashion",
+    "customerAge": 16,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 64,
+    "productItem": "Consectetur",
+    "productCategory": "Sport",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2017,
+    "orderPrice": 46,
+    "productItem": "Culpa",
+    "productCategory": "Electronics",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 60,
+    "productItem": "Ut",
+    "productCategory": "Jewelry",
+    "customerAge": 23,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 25,
+    "productItem": "Exercitation",
+    "productCategory": "Healthcare",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 128,
+    "productItem": "Est",
+    "productCategory": "Transport",
+    "customerAge": 64,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 124,
+    "productItem": "Ex",
+    "productCategory": "Sport",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 69,
+    "productItem": "Incididunt",
+    "productCategory": "Tools",
+    "customerAge": 69,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 114,
+    "productItem": "Ipsum",
+    "productCategory": "Transport",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 125,
+    "productItem": "Ut",
+    "productCategory": "Tools",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 147,
+    "productItem": "Adipisicing",
+    "productCategory": "Transport",
+    "customerAge": 32,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2018,
+    "orderPrice": 59,
+    "productItem": "Lorem",
+    "productCategory": "Fashion",
+    "customerAge": 31,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 134,
+    "productItem": "Non",
+    "productCategory": "Toys",
+    "customerAge": 49,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 134,
+    "productItem": "Lorem",
+    "productCategory": "Sport",
+    "customerAge": 65,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 149,
+    "productItem": "Commodo",
+    "productCategory": "Electronics",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 132,
+    "productItem": "Veniam",
+    "productCategory": "Services",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 10,
+    "productItem": "Qui",
+    "productCategory": "Toys",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 123,
+    "productItem": "Consectetur",
+    "productCategory": "Transport",
+    "customerAge": 18,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Chicago",
+    "year": 2019,
+    "orderPrice": 59,
+    "productItem": "Est",
+    "productCategory": "Toys",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 130,
+    "productItem": "Ut",
+    "productCategory": "Sport",
+    "customerAge": 70,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 132,
+    "productItem": "Cillum",
+    "productCategory": "Sport",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 85,
+    "productItem": "Nostrud",
+    "productCategory": "Sport",
+    "customerAge": 27,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 39,
+    "productItem": "Eu",
+    "productCategory": "Toys",
+    "customerAge": 32,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 13,
+    "productItem": "Id",
+    "productCategory": "Healthcare",
+    "customerAge": 49,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 14,
+    "productItem": "Sunt",
+    "productCategory": "Services",
+    "customerAge": 53,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 108,
+    "productItem": "Est",
+    "productCategory": "Tools",
+    "customerAge": 25,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 73,
+    "productItem": "Nulla",
+    "productCategory": "Healthcare",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 125,
+    "productItem": "Nisi",
+    "productCategory": "Transport",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2016,
+    "orderPrice": 119,
+    "productItem": "Amet",
+    "productCategory": "Services",
+    "customerAge": 65,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 110,
+    "productItem": "Sint",
+    "productCategory": "Toys",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 131,
+    "productItem": "Voluptate",
+    "productCategory": "Services",
+    "customerAge": 35,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 106,
+    "productItem": "Aliqua",
+    "productCategory": "Electronics",
+    "customerAge": 61,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 91,
+    "productItem": "Lorem",
+    "productCategory": "Fashion",
+    "customerAge": 16,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 121,
+    "productItem": "Labore",
+    "productCategory": "Transport",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 61,
+    "productItem": "Mollit",
+    "productCategory": "Toys",
+    "customerAge": 66,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 123,
+    "productItem": "Do",
+    "productCategory": "Tools",
+    "customerAge": 66,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 147,
+    "productItem": "Nostrud",
+    "productCategory": "Electronics",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 145,
+    "productItem": "Elit",
+    "productCategory": "Food",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 51,
+    "productItem": "Deserunt",
+    "productCategory": "Services",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 134,
+    "productItem": "Qui",
+    "productCategory": "Transport",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 97,
+    "productItem": "Sint",
+    "productCategory": "Sport",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2017,
+    "orderPrice": 149,
+    "productItem": "Voluptate",
+    "productCategory": "Jewelry",
+    "customerAge": 17,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 62,
+    "productItem": "Elit",
+    "productCategory": "Tools",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 40,
+    "productItem": "Nisi",
+    "productCategory": "Jewelry",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 67,
+    "productItem": "Reprehenderit",
+    "productCategory": "Transport",
+    "customerAge": 25,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 108,
+    "productItem": "Aliquip",
+    "productCategory": "Healthcare",
+    "customerAge": 59,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 103,
+    "productItem": "Labore",
+    "productCategory": "Healthcare",
+    "customerAge": 56,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 47,
+    "productItem": "Et",
+    "productCategory": "Sport",
+    "customerAge": 58,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2018,
+    "orderPrice": 132,
+    "productItem": "Eiusmod",
+    "productCategory": "Healthcare",
+    "customerAge": 27,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 37,
+    "productItem": "Veniam",
+    "productCategory": "Healthcare",
+    "customerAge": 34,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 13,
+    "productItem": "Esse",
+    "productCategory": "Jewelry",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 83,
+    "productItem": "Officia",
+    "productCategory": "Services",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 23,
+    "productItem": "Officia",
+    "productCategory": "Electronics",
+    "customerAge": 58,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 13,
+    "productItem": "Dolore",
+    "productCategory": "Services",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 4,
+    "productItem": "Cillum",
+    "productCategory": "Services",
+    "customerAge": 66,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 111,
+    "productItem": "Enim",
+    "productCategory": "Transport",
+    "customerAge": 15,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "NA",
+    "city": "Seattle",
+    "year": 2019,
+    "orderPrice": 57,
+    "productItem": "Lorem",
+    "productCategory": "Food",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 84,
+    "productItem": "Magna",
+    "productCategory": "Tools",
+    "customerAge": 60,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 5,
+    "productItem": "Ea",
+    "productCategory": "Healthcare",
+    "customerAge": 30,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 69,
+    "productItem": "Nisi",
+    "productCategory": "Services",
+    "customerAge": 26,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 46,
+    "productItem": "Culpa",
+    "productCategory": "Transport",
+    "customerAge": 66,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 81,
+    "productItem": "Et",
+    "productCategory": "Electronics",
+    "customerAge": 24,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 105,
+    "productItem": "Amet",
+    "productCategory": "Jewelry",
+    "customerAge": 68,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 117,
+    "productItem": "Ad",
+    "productCategory": "Healthcare",
+    "customerAge": 18,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2016,
+    "orderPrice": 66,
+    "productItem": "Duis",
+    "productCategory": "Healthcare",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 82,
+    "productItem": "Lorem",
+    "productCategory": "Electronics",
+    "customerAge": 63,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 146,
+    "productItem": "Est",
+    "productCategory": "Fashion",
+    "customerAge": 24,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 41,
+    "productItem": "Incididunt",
+    "productCategory": "Food",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 45,
+    "productItem": "Eu",
+    "productCategory": "Transport",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 79,
+    "productItem": "Elit",
+    "productCategory": "Tools",
+    "customerAge": 58,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 111,
+    "productItem": "Cupidatat",
+    "productCategory": "Healthcare",
+    "customerAge": 46,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 34,
+    "productItem": "Tempor",
+    "productCategory": "Healthcare",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2017,
+    "orderPrice": 97,
+    "productItem": "Esse",
+    "productCategory": "Transport",
+    "customerAge": 15,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 148,
+    "productItem": "Eu",
+    "productCategory": "Food",
+    "customerAge": 60,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 76,
+    "productItem": "Eu",
+    "productCategory": "Services",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 65,
+    "productItem": "Laborum",
+    "productCategory": "Healthcare",
+    "customerAge": 58,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 8,
+    "productItem": "Duis",
+    "productCategory": "Electronics",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 86,
+    "productItem": "Esse",
+    "productCategory": "Transport",
+    "customerAge": 67,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 90,
+    "productItem": "Sunt",
+    "productCategory": "Transport",
+    "customerAge": 36,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 16,
+    "productItem": "Velit",
+    "productCategory": "Sport",
+    "customerAge": 37,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 25,
+    "productItem": "Pariatur",
+    "productCategory": "Transport",
+    "customerAge": 60,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 114,
+    "productItem": "Pariatur",
+    "productCategory": "Food",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 79,
+    "productItem": "Culpa",
+    "productCategory": "Fashion",
+    "customerAge": 41,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2018,
+    "orderPrice": 102,
+    "productItem": "Culpa",
+    "productCategory": "Healthcare",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 36,
+    "productItem": "Duis",
+    "productCategory": "Toys",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 25,
+    "productItem": "Excepteur",
+    "productCategory": "Toys",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 117,
+    "productItem": "Magna",
+    "productCategory": "Tools",
+    "customerAge": 23,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 144,
+    "productItem": "Tempor",
+    "productCategory": "Services",
+    "customerAge": 55,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 100,
+    "productItem": "Consequat",
+    "productCategory": "Services",
+    "customerAge": 62,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 59,
+    "productItem": "Velit",
+    "productCategory": "Food",
+    "customerAge": 59,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Panama",
+    "year": 2019,
+    "orderPrice": 29,
+    "productItem": "Sunt",
+    "productCategory": "Transport",
+    "customerAge": 17,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 100,
+    "productItem": "Sunt",
+    "productCategory": "Toys",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 111,
+    "productItem": "Tempor",
+    "productCategory": "Healthcare",
+    "customerAge": 50,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 118,
+    "productItem": "Excepteur",
+    "productCategory": "Fashion",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 50,
+    "productItem": "Nulla",
+    "productCategory": "Toys",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 83,
+    "productItem": "Et",
+    "productCategory": "Electronics",
+    "customerAge": 36,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 124,
+    "productItem": "Cillum",
+    "productCategory": "Fashion",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 139,
+    "productItem": "Reprehenderit",
+    "productCategory": "Fashion",
+    "customerAge": 24,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 66,
+    "productItem": "Laborum",
+    "productCategory": "Sport",
+    "customerAge": 23,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 35,
+    "productItem": "Ullamco",
+    "productCategory": "Fashion",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2016,
+    "orderPrice": 117,
+    "productItem": "Occaecat",
+    "productCategory": "Tools",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 75,
+    "productItem": "Officia",
+    "productCategory": "Jewelry",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 91,
+    "productItem": "Est",
+    "productCategory": "Jewelry",
+    "customerAge": 70,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 94,
+    "productItem": "Adipisicing",
+    "productCategory": "Fashion",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 118,
+    "productItem": "Ea",
+    "productCategory": "Sport",
+    "customerAge": 30,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 13,
+    "productItem": "Nulla",
+    "productCategory": "Electronics",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 51,
+    "productItem": "Do",
+    "productCategory": "Electronics",
+    "customerAge": 46,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 124,
+    "productItem": "Tempor",
+    "productCategory": "Healthcare",
+    "customerAge": 24,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2017,
+    "orderPrice": 66,
+    "productItem": "Aute",
+    "productCategory": "Sport",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 76,
+    "productItem": "Mollit",
+    "productCategory": "Sport",
+    "customerAge": 64,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 84,
+    "productItem": "Proident",
+    "productCategory": "Healthcare",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 131,
+    "productItem": "Aute",
+    "productCategory": "Services",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 13,
+    "productItem": "Duis",
+    "productCategory": "Electronics",
+    "customerAge": 41,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 51,
+    "productItem": "In",
+    "productCategory": "Food",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 63,
+    "productItem": "Deserunt",
+    "productCategory": "Jewelry",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 147,
+    "productItem": "Sunt",
+    "productCategory": "Transport",
+    "customerAge": 41,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 9,
+    "productItem": "Lorem",
+    "productCategory": "Healthcare",
+    "customerAge": 53,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 147,
+    "productItem": "Aliqua",
+    "productCategory": "Toys",
+    "customerAge": 44,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2018,
+    "orderPrice": 10,
+    "productItem": "Magna",
+    "productCategory": "Jewelry",
+    "customerAge": 45,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 24,
+    "productItem": "Mollit",
+    "productCategory": "Tools",
+    "customerAge": 30,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 82,
+    "productItem": "Tempor",
+    "productCategory": "Healthcare",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 30,
+    "productItem": "Mollit",
+    "productCategory": "Jewelry",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 97,
+    "productItem": "Officia",
+    "productCategory": "Fashion",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 74,
+    "productItem": "Velit",
+    "productCategory": "Toys",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 82,
+    "productItem": "Cillum",
+    "productCategory": "Toys",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 116,
+    "productItem": "Mollit",
+    "productCategory": "Fashion",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 50,
+    "productItem": "In",
+    "productCategory": "Tools",
+    "customerAge": 59,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Cali",
+    "year": 2019,
+    "orderPrice": 20,
+    "productItem": "Pariatur",
+    "productCategory": "Transport",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 65,
+    "productItem": "Adipisicing",
+    "productCategory": "Transport",
+    "customerAge": 23,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 72,
+    "productItem": "Officia",
+    "productCategory": "Tools",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 47,
+    "productItem": "Reprehenderit",
+    "productCategory": "Fashion",
+    "customerAge": 22,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 41,
+    "productItem": "Exercitation",
+    "productCategory": "Jewelry",
+    "customerAge": 53,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 11,
+    "productItem": "Velit",
+    "productCategory": "Tools",
+    "customerAge": 49,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 67,
+    "productItem": "Ad",
+    "productCategory": "Electronics",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 103,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 15,
+    "productItem": "Nulla",
+    "productCategory": "Sport",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 149,
+    "productItem": "Dolore",
+    "productCategory": "Food",
+    "customerAge": 69,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 46,
+    "productItem": "Qui",
+    "productCategory": "Services",
+    "customerAge": 45,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2016,
+    "orderPrice": 145,
+    "productItem": "Dolore",
+    "productCategory": "Electronics",
+    "customerAge": 69,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 4,
+    "productItem": "Minim",
+    "productCategory": "Sport",
+    "customerAge": 15,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 136,
+    "productItem": "Aute",
+    "productCategory": "Tools",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 45,
+    "productItem": "Aliquip",
+    "productCategory": "Jewelry",
+    "customerAge": 45,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 57,
+    "productItem": "Eu",
+    "productCategory": "Electronics",
+    "customerAge": 20,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 62,
+    "productItem": "Et",
+    "productCategory": "Transport",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 137,
+    "productItem": "Fugiat",
+    "productCategory": "Toys",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 118,
+    "productItem": "Sunt",
+    "productCategory": "Fashion",
+    "customerAge": 39,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 87,
+    "productItem": "Aute",
+    "productCategory": "Food",
+    "customerAge": 43,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 30,
+    "productItem": "Eiusmod",
+    "productCategory": "Toys",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2017,
+    "orderPrice": 78,
+    "productItem": "Nostrud",
+    "productCategory": "Healthcare",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 22,
+    "productItem": "Dolore",
+    "productCategory": "Fashion",
+    "customerAge": 16,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 59,
+    "productItem": "Sit",
+    "productCategory": "Transport",
+    "customerAge": 65,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 79,
+    "productItem": "Nisi",
+    "productCategory": "Healthcare",
+    "customerAge": 67,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 116,
+    "productItem": "Do",
+    "productCategory": "Sport",
+    "customerAge": 41,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 106,
+    "productItem": "Fugiat",
+    "productCategory": "Toys",
+    "customerAge": 34,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 42,
+    "productItem": "Mollit",
+    "productCategory": "Tools",
+    "customerAge": 20,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 27,
+    "productItem": "Amet",
+    "productCategory": "Fashion",
+    "customerAge": 68,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 25,
+    "productItem": "Do",
+    "productCategory": "Toys",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 48,
+    "productItem": "Ullamco",
+    "productCategory": "Sport",
+    "customerAge": 46,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 145,
+    "productItem": "Et",
+    "productCategory": "Services",
+    "customerAge": 34,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 79,
+    "productItem": "Mollit",
+    "productCategory": "Electronics",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2018,
+    "orderPrice": 12,
+    "productItem": "Culpa",
+    "productCategory": "Tools",
+    "customerAge": 33,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 82,
+    "productItem": "Cupidatat",
+    "productCategory": "Jewelry",
+    "customerAge": 66,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 70,
+    "productItem": "Sit",
+    "productCategory": "Services",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 49,
+    "productItem": "Dolore",
+    "productCategory": "Healthcare",
+    "customerAge": 62,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 69,
+    "productItem": "Reprehenderit",
+    "productCategory": "Jewelry",
+    "customerAge": 39,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 84,
+    "productItem": "Anim",
+    "productCategory": "Fashion",
+    "customerAge": 40,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 145,
+    "productItem": "Pariatur",
+    "productCategory": "Services",
+    "customerAge": 28,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 28,
+    "productItem": "Commodo",
+    "productCategory": "Food",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 45,
+    "productItem": "Exercitation",
+    "productCategory": "Toys",
+    "customerAge": 59,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Mexico",
+    "year": 2019,
+    "orderPrice": 148,
+    "productItem": "Minim",
+    "productCategory": "Healthcare",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 106,
+    "productItem": "Officia",
+    "productCategory": "Fashion",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 121,
+    "productItem": "Labore",
+    "productCategory": "Jewelry",
+    "customerAge": 49,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 10,
+    "productItem": "Ad",
+    "productCategory": "Tools",
+    "customerAge": 46,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 120,
+    "productItem": "Ea",
+    "productCategory": "Tools",
+    "customerAge": 35,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 91,
+    "productItem": "Ea",
+    "productCategory": "Food",
+    "customerAge": 37,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 113,
+    "productItem": "Ad",
+    "productCategory": "Tools",
+    "customerAge": 63,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 81,
+    "productItem": "Fugiat",
+    "productCategory": "Sport",
+    "customerAge": 20,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 70,
+    "productItem": "Duis",
+    "productCategory": "Jewelry",
+    "customerAge": 29,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 8,
+    "productItem": "Ad",
+    "productCategory": "Transport",
+    "customerAge": 15,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 128,
+    "productItem": "Ea",
+    "productCategory": "Healthcare",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 85,
+    "productItem": "Ipsum",
+    "productCategory": "Healthcare",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 89,
+    "productItem": "Labore",
+    "productCategory": "Jewelry",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2016,
+    "orderPrice": 143,
+    "productItem": "Quis",
+    "productCategory": "Fashion",
+    "customerAge": 49,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 29,
+    "productItem": "Amet",
+    "productCategory": "Electronics",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 85,
+    "productItem": "Dolore",
+    "productCategory": "Electronics",
+    "customerAge": 40,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 78,
+    "productItem": "Nisi",
+    "productCategory": "Fashion",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 131,
+    "productItem": "Ipsum",
+    "productCategory": "Jewelry",
+    "customerAge": 62,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 81,
+    "productItem": "Duis",
+    "productCategory": "Toys",
+    "customerAge": 67,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 103,
+    "productItem": "Eu",
+    "productCategory": "Transport",
+    "customerAge": 69,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2017,
+    "orderPrice": 106,
+    "productItem": "Eu",
+    "productCategory": "Healthcare",
+    "customerAge": 34,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 40,
+    "productItem": "Reprehenderit",
+    "productCategory": "Fashion",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 104,
+    "productItem": "Ullamco",
+    "productCategory": "Fashion",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 61,
+    "productItem": "Elit",
+    "productCategory": "Electronics",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 116,
+    "productItem": "Consectetur",
+    "productCategory": "Sport",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 108,
+    "productItem": "Officia",
+    "productCategory": "Healthcare",
+    "customerAge": 70,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 55,
+    "productItem": "Tempor",
+    "productCategory": "Fashion",
+    "customerAge": 25,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 91,
+    "productItem": "Est",
+    "productCategory": "Sport",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 38,
+    "productItem": "Eiusmod",
+    "productCategory": "Jewelry",
+    "customerAge": 18,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 15,
+    "productItem": "Magna",
+    "productCategory": "Electronics",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 69,
+    "productItem": "Laborum",
+    "productCategory": "Toys",
+    "customerAge": 34,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 90,
+    "productItem": "Ut",
+    "productCategory": "Sport",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 29,
+    "productItem": "Dolore",
+    "productCategory": "Electronics",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2018,
+    "orderPrice": 49,
+    "productItem": "Et",
+    "productCategory": "Electronics",
+    "customerAge": 29,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 89,
+    "productItem": "Sit",
+    "productCategory": "Jewelry",
+    "customerAge": 57,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 75,
+    "productItem": "Cupidatat",
+    "productCategory": "Tools",
+    "customerAge": 31,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 113,
+    "productItem": "Aute",
+    "productCategory": "Jewelry",
+    "customerAge": 29,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 12,
+    "productItem": "Adipisicing",
+    "productCategory": "Healthcare",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 50,
+    "productItem": "Nisi",
+    "productCategory": "Transport",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 12,
+    "productItem": "Ad",
+    "productCategory": "Services",
+    "customerAge": 65,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 33,
+    "productItem": "Exercitation",
+    "productCategory": "Tools",
+    "customerAge": 37,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 76,
+    "productItem": "Veniam",
+    "productCategory": "Jewelry",
+    "customerAge": 23,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 136,
+    "productItem": "Deserunt",
+    "productCategory": "Jewelry",
+    "customerAge": 27,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "LA",
+    "city": "Buenos Aires",
+    "year": 2019,
+    "orderPrice": 61,
+    "productItem": "Sint",
+    "productCategory": "Transport",
+    "customerAge": 24,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 50,
+    "productItem": "Laboris",
+    "productCategory": "Jewelry",
+    "customerAge": 52,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 81,
+    "productItem": "Duis",
+    "productCategory": "Food",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 48,
+    "productItem": "Deserunt",
+    "productCategory": "Jewelry",
+    "customerAge": 49,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 39,
+    "productItem": "In",
+    "productCategory": "Fashion",
+    "customerAge": 70,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 69,
+    "productItem": "Minim",
+    "productCategory": "Fashion",
+    "customerAge": 52,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 94,
+    "productItem": "Aute",
+    "productCategory": "Electronics",
+    "customerAge": 15,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 35,
+    "productItem": "Et",
+    "productCategory": "Electronics",
+    "customerAge": 20,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 82,
+    "productItem": "Ullamco",
+    "productCategory": "Food",
+    "customerAge": 35,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 76,
+    "productItem": "Elit",
+    "productCategory": "Transport",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 149,
+    "productItem": "Labore",
+    "productCategory": "Healthcare",
+    "customerAge": 36,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2016,
+    "orderPrice": 30,
+    "productItem": "Cillum",
+    "productCategory": "Toys",
+    "customerAge": 53,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 5,
+    "productItem": "Adipisicing",
+    "productCategory": "Jewelry",
+    "customerAge": 28,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 32,
+    "productItem": "Proident",
+    "productCategory": "Jewelry",
+    "customerAge": 62,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 19,
+    "productItem": "Eiusmod",
+    "productCategory": "Electronics",
+    "customerAge": 27,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 114,
+    "productItem": "Magna",
+    "productCategory": "Jewelry",
+    "customerAge": 66,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 23,
+    "productItem": "Commodo",
+    "productCategory": "Tools",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 78,
+    "productItem": "Ex",
+    "productCategory": "Tools",
+    "customerAge": 46,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 41,
+    "productItem": "Consequat",
+    "productCategory": "Food",
+    "customerAge": 46,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2017,
+    "orderPrice": 128,
+    "productItem": "Esse",
+    "productCategory": "Jewelry",
+    "customerAge": 57,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 142,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 62,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 50,
+    "productItem": "Est",
+    "productCategory": "Jewelry",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 49,
+    "productItem": "Duis",
+    "productCategory": "Fashion",
+    "customerAge": 33,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 100,
+    "productItem": "Labore",
+    "productCategory": "Electronics",
+    "customerAge": 70,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 88,
+    "productItem": "Non",
+    "productCategory": "Services",
+    "customerAge": 49,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 16,
+    "productItem": "Occaecat",
+    "productCategory": "Food",
+    "customerAge": 45,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 67,
+    "productItem": "Voluptate",
+    "productCategory": "Food",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 14,
+    "productItem": "Duis",
+    "productCategory": "Food",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 92,
+    "productItem": "Deserunt",
+    "productCategory": "Jewelry",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 141,
+    "productItem": "Consectetur",
+    "productCategory": "Healthcare",
+    "customerAge": 49,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 62,
+    "productItem": "Ullamco",
+    "productCategory": "Sport",
+    "customerAge": 32,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 93,
+    "productItem": "Duis",
+    "productCategory": "Jewelry",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2018,
+    "orderPrice": 19,
+    "productItem": "Dolore",
+    "productCategory": "Services",
+    "customerAge": 40,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 30,
+    "productItem": "Cillum",
+    "productCategory": "Electronics",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 43,
+    "productItem": "Do",
+    "productCategory": "Fashion",
+    "customerAge": 59,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 102,
+    "productItem": "Ea",
+    "productCategory": "Transport",
+    "customerAge": 47,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 136,
+    "productItem": "Velit",
+    "productCategory": "Tools",
+    "customerAge": 41,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 84,
+    "productItem": "Irure",
+    "productCategory": "Electronics",
+    "customerAge": 70,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 9,
+    "productItem": "Nulla",
+    "productCategory": "Jewelry",
+    "customerAge": 32,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 123,
+    "productItem": "Velit",
+    "productCategory": "Food",
+    "customerAge": 67,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 104,
+    "productItem": "Culpa",
+    "productCategory": "Electronics",
+    "customerAge": 35,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 147,
+    "productItem": "Excepteur",
+    "productCategory": "Services",
+    "customerAge": 66,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 39,
+    "productItem": "Lorem",
+    "productCategory": "Services",
+    "customerAge": 56,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 71,
+    "productItem": "Dolor",
+    "productCategory": "Toys",
+    "customerAge": 40,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Amsterdam",
+    "year": 2019,
+    "orderPrice": 15,
+    "productItem": "Nulla",
+    "productCategory": "Transport",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 95,
+    "productItem": "Ea",
+    "productCategory": "Fashion",
+    "customerAge": 43,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 65,
+    "productItem": "Cupidatat",
+    "productCategory": "Services",
+    "customerAge": 26,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 24,
+    "productItem": "Do",
+    "productCategory": "Fashion",
+    "customerAge": 44,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 68,
+    "productItem": "Proident",
+    "productCategory": "Healthcare",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 136,
+    "productItem": "Amet",
+    "productCategory": "Tools",
+    "customerAge": 33,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 68,
+    "productItem": "Dolore",
+    "productCategory": "Services",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 134,
+    "productItem": "Cillum",
+    "productCategory": "Toys",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2016,
+    "orderPrice": 91,
+    "productItem": "Ex",
+    "productCategory": "Tools",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 128,
+    "productItem": "Id",
+    "productCategory": "Jewelry",
+    "customerAge": 69,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 149,
+    "productItem": "Lorem",
+    "productCategory": "Sport",
+    "customerAge": 39,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 126,
+    "productItem": "Consectetur",
+    "productCategory": "Toys",
+    "customerAge": 63,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 127,
+    "productItem": "Qui",
+    "productCategory": "Electronics",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 11,
+    "productItem": "Proident",
+    "productCategory": "Sport",
+    "customerAge": 34,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 82,
+    "productItem": "Ut",
+    "productCategory": "Electronics",
+    "customerAge": 52,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 71,
+    "productItem": "Ea",
+    "productCategory": "Healthcare",
+    "customerAge": 25,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 8,
+    "productItem": "Aute",
+    "productCategory": "Food",
+    "customerAge": 51,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2017,
+    "orderPrice": 58,
+    "productItem": "Anim",
+    "productCategory": "Sport",
+    "customerAge": 45,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 35,
+    "productItem": "Aliquip",
+    "productCategory": "Food",
+    "customerAge": 17,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 33,
+    "productItem": "Magna",
+    "productCategory": "Electronics",
+    "customerAge": 40,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 45,
+    "productItem": "Eiusmod",
+    "productCategory": "Electronics",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 123,
+    "productItem": "Nulla",
+    "productCategory": "Healthcare",
+    "customerAge": 51,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 48,
+    "productItem": "Consequat",
+    "productCategory": "Electronics",
+    "customerAge": 29,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 125,
+    "productItem": "Enim",
+    "productCategory": "Healthcare",
+    "customerAge": 36,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 25,
+    "productItem": "Commodo",
+    "productCategory": "Healthcare",
+    "customerAge": 20,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 128,
+    "productItem": "Voluptate",
+    "productCategory": "Fashion",
+    "customerAge": 24,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2018,
+    "orderPrice": 56,
+    "productItem": "Quis",
+    "productCategory": "Food",
+    "customerAge": 36,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 137,
+    "productItem": "Aliqua",
+    "productCategory": "Sport",
+    "customerAge": 54,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 99,
+    "productItem": "Velit",
+    "productCategory": "Services",
+    "customerAge": 39,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 149,
+    "productItem": "In",
+    "productCategory": "Transport",
+    "customerAge": 52,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 91,
+    "productItem": "Aliquip",
+    "productCategory": "Electronics",
+    "customerAge": 59,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 46,
+    "productItem": "Officia",
+    "productCategory": "Sport",
+    "customerAge": 32,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 70,
+    "productItem": "Aute",
+    "productCategory": "Healthcare",
+    "customerAge": 52,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 138,
+    "productItem": "Adipisicing",
+    "productCategory": "Toys",
+    "customerAge": 69,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Riga",
+    "year": 2019,
+    "orderPrice": 26,
+    "productItem": "Reprehenderit",
+    "productCategory": "Services",
+    "customerAge": 66,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 90,
+    "productItem": "Exercitation",
+    "productCategory": "Jewelry",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 54,
+    "productItem": "Occaecat",
+    "productCategory": "Healthcare",
+    "customerAge": 58,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 51,
+    "productItem": "Duis",
+    "productCategory": "Fashion",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 119,
+    "productItem": "Enim",
+    "productCategory": "Sport",
+    "customerAge": 19,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 11,
+    "productItem": "Nisi",
+    "productCategory": "Toys",
+    "customerAge": 51,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 65,
+    "productItem": "Eu",
+    "productCategory": "Services",
+    "customerAge": 48,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 21,
+    "productItem": "Laboris",
+    "productCategory": "Transport",
+    "customerAge": 57,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 142,
+    "productItem": "Cupidatat",
+    "productCategory": "Jewelry",
+    "customerAge": 20,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 97,
+    "productItem": "Non",
+    "productCategory": "Food",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2016,
+    "orderPrice": 133,
+    "productItem": "Quis",
+    "productCategory": "Tools",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 9,
+    "productItem": "Excepteur",
+    "productCategory": "Electronics",
+    "customerAge": 23,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 45,
+    "productItem": "Sunt",
+    "productCategory": "Food",
+    "customerAge": 26,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 135,
+    "productItem": "Irure",
+    "productCategory": "Healthcare",
+    "customerAge": 37,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 88,
+    "productItem": "Amet",
+    "productCategory": "Transport",
+    "customerAge": 51,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 85,
+    "productItem": "Tempor",
+    "productCategory": "Services",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 35,
+    "productItem": "Sit",
+    "productCategory": "Tools",
+    "customerAge": 27,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 145,
+    "productItem": "Velit",
+    "productCategory": "Fashion",
+    "customerAge": 15,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 4,
+    "productItem": "Adipisicing",
+    "productCategory": "Transport",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2017,
+    "orderPrice": 107,
+    "productItem": "Id",
+    "productCategory": "Food",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 90,
+    "productItem": "Dolor",
+    "productCategory": "Healthcare",
+    "customerAge": 35,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 133,
+    "productItem": "Consequat",
+    "productCategory": "Healthcare",
+    "customerAge": 64,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 30,
+    "productItem": "Consequat",
+    "productCategory": "Sport",
+    "customerAge": 58,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 31,
+    "productItem": "Quis",
+    "productCategory": "Services",
+    "customerAge": 36,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 92,
+    "productItem": "Qui",
+    "productCategory": "Electronics",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 133,
+    "productItem": "Pariatur",
+    "productCategory": "Healthcare",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 71,
+    "productItem": "In",
+    "productCategory": "Services",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 63,
+    "productItem": "Et",
+    "productCategory": "Food",
+    "customerAge": 21,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2018,
+    "orderPrice": 132,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 18,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 95,
+    "productItem": "Minim",
+    "productCategory": "Transport",
+    "customerAge": 30,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 18,
+    "productItem": "Consequat",
+    "productCategory": "Jewelry",
+    "customerAge": 22,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 87,
+    "productItem": "Qui",
+    "productCategory": "Food",
+    "customerAge": 56,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 45,
+    "productItem": "Aliqua",
+    "productCategory": "Fashion",
+    "customerAge": 22,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 95,
+    "productItem": "Eiusmod",
+    "productCategory": "Food",
+    "customerAge": 35,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 145,
+    "productItem": "Esse",
+    "productCategory": "Sport",
+    "customerAge": 63,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 99,
+    "productItem": "Dolor",
+    "productCategory": "Food",
+    "customerAge": 35,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Istanbul",
+    "year": 2019,
+    "orderPrice": 80,
+    "productItem": "Sint",
+    "productCategory": "Sport",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 6,
+    "productItem": "Irure",
+    "productCategory": "Tools",
+    "customerAge": 45,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 145,
+    "productItem": "Esse",
+    "productCategory": "Toys",
+    "customerAge": 15,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 122,
+    "productItem": "Do",
+    "productCategory": "Electronics",
+    "customerAge": 68,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 33,
+    "productItem": "Ex",
+    "productCategory": "Toys",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 74,
+    "productItem": "Incididunt",
+    "productCategory": "Food",
+    "customerAge": 33,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 96,
+    "productItem": "Aute",
+    "productCategory": "Food",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 39,
+    "productItem": "Amet",
+    "productCategory": "Food",
+    "customerAge": 21,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2016,
+    "orderPrice": 123,
+    "productItem": "Id",
+    "productCategory": "Services",
+    "customerAge": 43,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 14,
+    "productItem": "Nisi",
+    "productCategory": "Electronics",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 109,
+    "productItem": "Est",
+    "productCategory": "Services",
+    "customerAge": 43,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 139,
+    "productItem": "Exercitation",
+    "productCategory": "Electronics",
+    "customerAge": 67,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 121,
+    "productItem": "Nisi",
+    "productCategory": "Sport",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 69,
+    "productItem": "Minim",
+    "productCategory": "Healthcare",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 112,
+    "productItem": "Esse",
+    "productCategory": "Toys",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2017,
+    "orderPrice": 39,
+    "productItem": "Velit",
+    "productCategory": "Tools",
+    "customerAge": 60,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 35,
+    "productItem": "Magna",
+    "productCategory": "Healthcare",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 82,
+    "productItem": "Laborum",
+    "productCategory": "Fashion",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 16,
+    "productItem": "Pariatur",
+    "productCategory": "Services",
+    "customerAge": 64,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 15,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 17,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 16,
+    "productItem": "Aliquip",
+    "productCategory": "Toys",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 109,
+    "productItem": "Mollit",
+    "productCategory": "Services",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 126,
+    "productItem": "Officia",
+    "productCategory": "Jewelry",
+    "customerAge": 37,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 85,
+    "productItem": "Reprehenderit",
+    "productCategory": "Sport",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 51,
+    "productItem": "Aliqua",
+    "productCategory": "Fashion",
+    "customerAge": 62,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 145,
+    "productItem": "Fugiat",
+    "productCategory": "Food",
+    "customerAge": 68,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 31,
+    "productItem": "Mollit",
+    "productCategory": "Food",
+    "customerAge": 38,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2018,
+    "orderPrice": 115,
+    "productItem": "Exercitation",
+    "productCategory": "Fashion",
+    "customerAge": 65,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 24,
+    "productItem": "Deserunt",
+    "productCategory": "Services",
+    "customerAge": 15,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 128,
+    "productItem": "Do",
+    "productCategory": "Jewelry",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 7,
+    "productItem": "Incididunt",
+    "productCategory": "Tools",
+    "customerAge": 49,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 127,
+    "productItem": "Ex",
+    "productCategory": "Electronics",
+    "customerAge": 59,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 48,
+    "productItem": "Esse",
+    "productCategory": "Jewelry",
+    "customerAge": 68,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 6,
+    "productItem": "Eu",
+    "productCategory": "Healthcare",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "EMEA",
+    "city": "Lagos",
+    "year": 2019,
+    "orderPrice": 72,
+    "productItem": "Fugiat",
+    "productCategory": "Sport",
+    "customerAge": 68,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 104,
+    "productItem": "Est",
+    "productCategory": "Tools",
+    "customerAge": 70,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 144,
+    "productItem": "Labore",
+    "productCategory": "Tools",
+    "customerAge": 66,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 132,
+    "productItem": "Ut",
+    "productCategory": "Services",
+    "customerAge": 20,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 99,
+    "productItem": "Sunt",
+    "productCategory": "Tools",
+    "customerAge": 24,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 8,
+    "productItem": "Eiusmod",
+    "productCategory": "Jewelry",
+    "customerAge": 31,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 68,
+    "productItem": "Nostrud",
+    "productCategory": "Food",
+    "customerAge": 59,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 19,
+    "productItem": "Enim",
+    "productCategory": "Sport",
+    "customerAge": 23,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 32,
+    "productItem": "Aute",
+    "productCategory": "Transport",
+    "customerAge": 69,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 144,
+    "productItem": "Tempor",
+    "productCategory": "Fashion",
+    "customerAge": 19,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 46,
+    "productItem": "Veniam",
+    "productCategory": "Toys",
+    "customerAge": 62,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2016,
+    "orderPrice": 80,
+    "productItem": "Do",
+    "productCategory": "Fashion",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 23,
+    "productItem": "Incididunt",
+    "productCategory": "Transport",
+    "customerAge": 27,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 94,
+    "productItem": "Laboris",
+    "productCategory": "Electronics",
+    "customerAge": 58,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 41,
+    "productItem": "Elit",
+    "productCategory": "Toys",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 81,
+    "productItem": "Quis",
+    "productCategory": "Food",
+    "customerAge": 15,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 115,
+    "productItem": "Ex",
+    "productCategory": "Fashion",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 46,
+    "productItem": "Mollit",
+    "productCategory": "Fashion",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 7,
+    "productItem": "Irure",
+    "productCategory": "Jewelry",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 90,
+    "productItem": "Sit",
+    "productCategory": "Food",
+    "customerAge": 38,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 113,
+    "productItem": "Magna",
+    "productCategory": "Toys",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 29,
+    "productItem": "Cillum",
+    "productCategory": "Food",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2017,
+    "orderPrice": 71,
+    "productItem": "Occaecat",
+    "productCategory": "Food",
+    "customerAge": 42,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 36,
+    "productItem": "Aliqua",
+    "productCategory": "Electronics",
+    "customerAge": 38,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 147,
+    "productItem": "Commodo",
+    "productCategory": "Services",
+    "customerAge": 56,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 35,
+    "productItem": "Eiusmod",
+    "productCategory": "Services",
+    "customerAge": 32,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 132,
+    "productItem": "Aliquip",
+    "productCategory": "Tools",
+    "customerAge": 17,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 141,
+    "productItem": "Adipisicing",
+    "productCategory": "Services",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 97,
+    "productItem": "Officia",
+    "productCategory": "Sport",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2018,
+    "orderPrice": 66,
+    "productItem": "Laboris",
+    "productCategory": "Transport",
+    "customerAge": 58,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 126,
+    "productItem": "Pariatur",
+    "productCategory": "Tools",
+    "customerAge": 20,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 128,
+    "productItem": "Aute",
+    "productCategory": "Food",
+    "customerAge": 56,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 83,
+    "productItem": "Do",
+    "productCategory": "Jewelry",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 145,
+    "productItem": "Consectetur",
+    "productCategory": "Tools",
+    "customerAge": 40,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 4,
+    "productItem": "Tempor",
+    "productCategory": "Healthcare",
+    "customerAge": 70,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 146,
+    "productItem": "Deserunt",
+    "productCategory": "Jewelry",
+    "customerAge": 45,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Sydney",
+    "year": 2019,
+    "orderPrice": 110,
+    "productItem": "Ea",
+    "productCategory": "Transport",
+    "customerAge": 53,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 57,
+    "productItem": "Aliqua",
+    "productCategory": "Tools",
+    "customerAge": 37,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 58,
+    "productItem": "Pariatur",
+    "productCategory": "Transport",
+    "customerAge": 26,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 115,
+    "productItem": "Aute",
+    "productCategory": "Food",
+    "customerAge": 34,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 112,
+    "productItem": "Eiusmod",
+    "productCategory": "Electronics",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 6,
+    "productItem": "Ullamco",
+    "productCategory": "Food",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 125,
+    "productItem": "Aliquip",
+    "productCategory": "Transport",
+    "customerAge": 57,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 140,
+    "productItem": "Lorem",
+    "productCategory": "Healthcare",
+    "customerAge": 55,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 6,
+    "productItem": "Culpa",
+    "productCategory": "Toys",
+    "customerAge": 34,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 12,
+    "productItem": "Sint",
+    "productCategory": "Toys",
+    "customerAge": 51,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 146,
+    "productItem": "Deserunt",
+    "productCategory": "Transport",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 22,
+    "productItem": "Reprehenderit",
+    "productCategory": "Fashion",
+    "customerAge": 17,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 90,
+    "productItem": "Nisi",
+    "productCategory": "Services",
+    "customerAge": 64,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2016,
+    "orderPrice": 51,
+    "productItem": "Commodo",
+    "productCategory": "Food",
+    "customerAge": 47,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 7,
+    "productItem": "Eiusmod",
+    "productCategory": "Jewelry",
+    "customerAge": 34,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 30,
+    "productItem": "Et",
+    "productCategory": "Fashion",
+    "customerAge": 40,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 33,
+    "productItem": "Aliqua",
+    "productCategory": "Sport",
+    "customerAge": 33,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 65,
+    "productItem": "Sint",
+    "productCategory": "Sport",
+    "customerAge": 43,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 34,
+    "productItem": "Officia",
+    "productCategory": "Electronics",
+    "customerAge": 47,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 143,
+    "productItem": "Et",
+    "productCategory": "Healthcare",
+    "customerAge": 41,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 50,
+    "productItem": "Minim",
+    "productCategory": "Food",
+    "customerAge": 56,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 143,
+    "productItem": "Aliqua",
+    "productCategory": "Jewelry",
+    "customerAge": 17,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 51,
+    "productItem": "Aliquip",
+    "productCategory": "Transport",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 115,
+    "productItem": "Occaecat",
+    "productCategory": "Fashion",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 44,
+    "productItem": "Magna",
+    "productCategory": "Toys",
+    "customerAge": 39,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2017,
+    "orderPrice": 26,
+    "productItem": "Eiusmod",
+    "productCategory": "Tools",
+    "customerAge": 39,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 29,
+    "productItem": "Veniam",
+    "productCategory": "Healthcare",
+    "customerAge": 51,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 130,
+    "productItem": "Quis",
+    "productCategory": "Tools",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 90,
+    "productItem": "Ea",
+    "productCategory": "Toys",
+    "customerAge": 62,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 137,
+    "productItem": "Nisi",
+    "productCategory": "Tools",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 5,
+    "productItem": "Nostrud",
+    "productCategory": "Fashion",
+    "customerAge": 18,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 109,
+    "productItem": "Fugiat",
+    "productCategory": "Services",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2018,
+    "orderPrice": 99,
+    "productItem": "Magna",
+    "productCategory": "Electronics",
+    "customerAge": 56,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 71,
+    "productItem": "Irure",
+    "productCategory": "Jewelry",
+    "customerAge": 56,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 38,
+    "productItem": "Elit",
+    "productCategory": "Tools",
+    "customerAge": 65,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 108,
+    "productItem": "Ullamco",
+    "productCategory": "Transport",
+    "customerAge": 69,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 59,
+    "productItem": "Consequat",
+    "productCategory": "Transport",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 59,
+    "productItem": "Cupidatat",
+    "productCategory": "Services",
+    "customerAge": 69,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 11,
+    "productItem": "Consequat",
+    "productCategory": "Fashion",
+    "customerAge": 37,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 138,
+    "productItem": "Velit",
+    "productCategory": "Transport",
+    "customerAge": 43,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 43,
+    "productItem": "Sit",
+    "productCategory": "Transport",
+    "customerAge": 15,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 12,
+    "productItem": "Ex",
+    "productCategory": "Healthcare",
+    "customerAge": 62,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 107,
+    "productItem": "Anim",
+    "productCategory": "Transport",
+    "customerAge": 30,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 54,
+    "productItem": "Velit",
+    "productCategory": "Toys",
+    "customerAge": 42,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 44,
+    "productItem": "Ut",
+    "productCategory": "Jewelry",
+    "customerAge": 23,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Osaka",
+    "year": 2019,
+    "orderPrice": 73,
+    "productItem": "Deserunt",
+    "productCategory": "Tools",
+    "customerAge": 48,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 69,
+    "productItem": "Commodo",
+    "productCategory": "Electronics",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 131,
+    "productItem": "In",
+    "productCategory": "Fashion",
+    "customerAge": 17,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 132,
+    "productItem": "Duis",
+    "productCategory": "Food",
+    "customerAge": 46,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 113,
+    "productItem": "Id",
+    "productCategory": "Jewelry",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 20,
+    "productItem": "Velit",
+    "productCategory": "Food",
+    "customerAge": 42,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 34,
+    "productItem": "Aliqua",
+    "productCategory": "Electronics",
+    "customerAge": 64,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 39,
+    "productItem": "Lorem",
+    "productCategory": "Healthcare",
+    "customerAge": 31,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 56,
+    "productItem": "Id",
+    "productCategory": "Tools",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 9,
+    "productItem": "Tempor",
+    "productCategory": "Tools",
+    "customerAge": 53,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 124,
+    "productItem": "Eiusmod",
+    "productCategory": "Food",
+    "customerAge": 68,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 117,
+    "productItem": "Proident",
+    "productCategory": "Tools",
+    "customerAge": 38,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 127,
+    "productItem": "Ut",
+    "productCategory": "Fashion",
+    "customerAge": 53,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2016,
+    "orderPrice": 137,
+    "productItem": "Qui",
+    "productCategory": "Healthcare",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 9,
+    "productItem": "Voluptate",
+    "productCategory": "Sport",
+    "customerAge": 28,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 131,
+    "productItem": "Officia",
+    "productCategory": "Food",
+    "customerAge": 48,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 26,
+    "productItem": "Ad",
+    "productCategory": "Toys",
+    "customerAge": 54,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 14,
+    "productItem": "Minim",
+    "productCategory": "Fashion",
+    "customerAge": 66,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 74,
+    "productItem": "Ad",
+    "productCategory": "Sport",
+    "customerAge": 44,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 28,
+    "productItem": "Laborum",
+    "productCategory": "Sport",
+    "customerAge": 51,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2017,
+    "orderPrice": 93,
+    "productItem": "Mollit",
+    "productCategory": "Transport",
+    "customerAge": 52,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 12,
+    "productItem": "Et",
+    "productCategory": "Fashion",
+    "customerAge": 59,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 45,
+    "productItem": "Culpa",
+    "productCategory": "Services",
+    "customerAge": 36,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 8,
+    "productItem": "Consectetur",
+    "productCategory": "Services",
+    "customerAge": 27,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 118,
+    "productItem": "Qui",
+    "productCategory": "Jewelry",
+    "customerAge": 48,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 78,
+    "productItem": "Eiusmod",
+    "productCategory": "Services",
+    "customerAge": 48,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 127,
+    "productItem": "Ut",
+    "productCategory": "Electronics",
+    "customerAge": 16,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 126,
+    "productItem": "Ad",
+    "productCategory": "Electronics",
+    "customerAge": 60,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 43,
+    "productItem": "Velit",
+    "productCategory": "Food",
+    "customerAge": 61,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 60,
+    "productItem": "Magna",
+    "productCategory": "Tools",
+    "customerAge": 16,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 10,
+    "productItem": "Aliqua",
+    "productCategory": "Toys",
+    "customerAge": 54,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 141,
+    "productItem": "Veniam",
+    "productCategory": "Transport",
+    "customerAge": 23,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2018,
+    "orderPrice": 121,
+    "productItem": "In",
+    "productCategory": "Services",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 85,
+    "productItem": "Ipsum",
+    "productCategory": "Toys",
+    "customerAge": 66,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 108,
+    "productItem": "Ullamco",
+    "productCategory": "Healthcare",
+    "customerAge": 33,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 126,
+    "productItem": "Sint",
+    "productCategory": "Toys",
+    "customerAge": 38,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 135,
+    "productItem": "Ipsum",
+    "productCategory": "Electronics",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 60,
+    "productItem": "Laboris",
+    "productCategory": "Electronics",
+    "customerAge": 52,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 9,
+    "productItem": "Exercitation",
+    "productCategory": "Food",
+    "customerAge": 64,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Tokyo",
+    "year": 2019,
+    "orderPrice": 137,
+    "productItem": "Enim",
+    "productCategory": "Electronics",
+    "customerAge": 36,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 69,
+    "productItem": "Cillum",
+    "productCategory": "Tools",
+    "customerAge": 33,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 144,
+    "productItem": "Ullamco",
+    "productCategory": "Electronics",
+    "customerAge": 52,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 30,
+    "productItem": "Proident",
+    "productCategory": "Sport",
+    "customerAge": 58,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 87,
+    "productItem": "Qui",
+    "productCategory": "Jewelry",
+    "customerAge": 49,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 91,
+    "productItem": "Lorem",
+    "productCategory": "Sport",
+    "customerAge": 62,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 121,
+    "productItem": "Non",
+    "productCategory": "Toys",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 139,
+    "productItem": "Nulla",
+    "productCategory": "Food",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 36,
+    "productItem": "Est",
+    "productCategory": "Fashion",
+    "customerAge": 29,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 115,
+    "productItem": "Esse",
+    "productCategory": "Tools",
+    "customerAge": 45,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 149,
+    "productItem": "Ipsum",
+    "productCategory": "Toys",
+    "customerAge": 21,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 7,
+    "productItem": "Nisi",
+    "productCategory": "Toys",
+    "customerAge": 27,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 30,
+    "productItem": "Occaecat",
+    "productCategory": "Tools",
+    "customerAge": 36,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2016,
+    "orderPrice": 59,
+    "productItem": "Nulla",
+    "productCategory": "Services",
+    "customerAge": 31,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 95,
+    "productItem": "Aliquip",
+    "productCategory": "Jewelry",
+    "customerAge": 50,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 108,
+    "productItem": "Lorem",
+    "productCategory": "Food",
+    "customerAge": 66,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 24,
+    "productItem": "Magna",
+    "productCategory": "Services",
+    "customerAge": 26,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 110,
+    "productItem": "Aliquip",
+    "productCategory": "Services",
+    "customerAge": 43,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 70,
+    "productItem": "Minim",
+    "productCategory": "Tools",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 19,
+    "productItem": "Anim",
+    "productCategory": "Sport",
+    "customerAge": 55,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 40,
+    "productItem": "Aute",
+    "productCategory": "Sport",
+    "customerAge": 53,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2017,
+    "orderPrice": 57,
+    "productItem": "Adipisicing",
+    "productCategory": "Tools",
+    "customerAge": 54,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 135,
+    "productItem": "Voluptate",
+    "productCategory": "Jewelry",
+    "customerAge": 39,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 77,
+    "productItem": "Sint",
+    "productCategory": "Electronics",
+    "customerAge": 52,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 72,
+    "productItem": "Do",
+    "productCategory": "Jewelry",
+    "customerAge": 49,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 96,
+    "productItem": "Laborum",
+    "productCategory": "Jewelry",
+    "customerAge": 51,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 70,
+    "productItem": "Laborum",
+    "productCategory": "Jewelry",
+    "customerAge": 25,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 61,
+    "productItem": "Deserunt",
+    "productCategory": "Services",
+    "customerAge": 61,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 101,
+    "productItem": "Consectetur",
+    "productCategory": "Food",
+    "customerAge": 53,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2018,
+    "orderPrice": 112,
+    "productItem": "Ipsum",
+    "productCategory": "Electronics",
+    "customerAge": 68,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 50,
+    "productItem": "Ut",
+    "productCategory": "Services",
+    "customerAge": 48,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 118,
+    "productItem": "Duis",
+    "productCategory": "Services",
+    "customerAge": 22,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 142,
+    "productItem": "Voluptate",
+    "productCategory": "Electronics",
+    "customerAge": 29,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 112,
+    "productItem": "Incididunt",
+    "productCategory": "Transport",
+    "customerAge": 44,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 33,
+    "productItem": "Ad",
+    "productCategory": "Jewelry",
+    "customerAge": 48,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 98,
+    "productItem": "In",
+    "productCategory": "Electronics",
+    "customerAge": 47,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Cash"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 99,
+    "productItem": "Aliquip",
+    "productCategory": "Tools",
+    "customerAge": 52,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 19,
+    "productItem": "Ex",
+    "productCategory": "Food",
+    "customerAge": 40,
+    "purchaseMethod": "Online",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 142,
+    "productItem": "Officia",
+    "productCategory": "Services",
+    "customerAge": 19,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 9,
+    "productItem": "Occaecat",
+    "productCategory": "Transport",
+    "customerAge": 55,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 20,
+    "productItem": "Nostrud",
+    "productCategory": "Healthcare",
+    "customerAge": 61,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Card"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 50,
+    "productItem": "Dolore",
+    "productCategory": "Food",
+    "customerAge": 34,
+    "purchaseMethod": "In-store",
+    "paymentMethod": "Check"
+  },
+  {
+    "region": "AP",
+    "city": "Seoul",
+    "year": 2019,
+    "orderPrice": 72,
+    "productItem": "Reprehenderit",
+    "productCategory": "Services",
+    "customerAge": 50,
+    "purchaseMethod": "Phone",
+    "paymentMethod": "Card"
+  }
+]</ConnectString>
+				<DataProvider>JSON</DataProvider>
 			</ConnectionProperties>
 		</DataSource>
 	</DataSources>
@@ -1980,23 +8680,23 @@
 				<Field Name="year">
 					<DataField>year</DataField>
 				</Field>
-				<Field Name="order_price">
-					<DataField>order_price</DataField>
+				<Field Name="orderPrice">
+					<DataField>orderPrice</DataField>
 				</Field>
-				<Field Name="product_item">
-					<DataField>product_item</DataField>
+				<Field Name="productItem">
+					<DataField>productItem</DataField>
 				</Field>
-				<Field Name="product_category">
-					<DataField>product_category</DataField>
+				<Field Name="productCategory">
+					<DataField>productCategory</DataField>
 				</Field>
-				<Field Name="customer_age">
-					<DataField>customer_age</DataField>
+				<Field Name="customerAge">
+					<DataField>customerAge</DataField>
 				</Field>
-				<Field Name="purchase_method">
-					<DataField>purchase_method</DataField>
+				<Field Name="purchaseMethod">
+					<DataField>purchaseMethod</DataField>
 				</Field>
-				<Field Name="payment_method">
-					<DataField>payment_method</DataField>
+				<Field Name="paymentMethod">
+					<DataField>paymentMethod</DataField>
 				</Field>
 			</Fields>
 			<Filters>
@@ -2015,14 +8715,14 @@
 					<Operator>Equal</Operator>
 				</Filter>
 				<Filter>
-					<FilterExpression>=Join(Parameters!SelectedPayMethods.Value, ",").Contains(Fields!payment_method.Value)</FilterExpression>
+					<FilterExpression>=Join(Parameters!SelectedPayMethods.Value, ",").Contains(Fields!paymentMethod.Value)</FilterExpression>
 					<FilterValues>
 						<FilterValue>True</FilterValue>
 					</FilterValues>
 					<Operator>Equal</Operator>
 				</Filter>
 				<Filter>
-					<FilterExpression>=Fields!customer_age.Value</FilterExpression>
+					<FilterExpression>=Fields!customerAge.Value</FilterExpression>
 					<FilterValues>
 						<FilterValue>=Parameters!AgeFrom.Value</FilterValue>
 						<FilterValue>=Parameters!AgeTo.Value</FilterValue>
@@ -2031,7 +8731,7 @@
 				</Filter>
 			</Filters>
 			<Query>
-				<CommandText />
+				<CommandText>$.[*]</CommandText>
 				<DataSourceName>AcmeStore</DataSourceName>
 			</Query>
 		</DataSet>
