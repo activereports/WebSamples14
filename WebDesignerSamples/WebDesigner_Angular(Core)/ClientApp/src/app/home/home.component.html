@@ -1,0 +1,19 @@
+<div id="designer-id" style="width: 100%; height: 100%;"></div>
+<div id="file-view-id" style="display: none; width: 100%; height: 100%; display: none;"></div>
+<div id="save-as-dialog-id" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; z-index: 9999;"></div>
+<div id="data-set-picker-dialog-id" style="display: none; position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;z-index: 9999;background-color: #dedede;"></div>
+<div id="data-source-editor-dialog-id" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; z-index: 9999;"></div>
+<div id="viewer-id" class="theme-blue" style="display: block; display: none; position: absolute;top: 0;left: 0;width: 100%; height: 100%;">
+  <div class="viewer theme-default" style="position: absolute; width: 100%; height: 100%;">
+    <div class="viewer-container-app-header">
+      <button (click)="closeViewer()" class="viewer-container-back-button" id="viewer-container-button-back">
+        <i class="mdi mdi-chevron-left"></i>
+      </button>
+      <div>ActiveReports Web Designer</div>
+      <div class="viewer-container-header-name-panel">
+        <span>{{reportName}} *</span>
+      </div>
+    </div>
+    <div #viewer class="viewer-container-iframe-container theme-blue"></div>
+  </div>
+</div>
