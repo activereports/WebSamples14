@@ -15,11 +15,16 @@ namespace WebDesignerMvcCore
 {
 	public class Startup
 	{
-		private static readonly DirectoryInfo ResourcesRootDirectory = new DirectoryInfo(@".\resources\");
-		private static readonly DirectoryInfo TemplatesRootDirectory = new DirectoryInfo(@".\templates\");
-		private static readonly DirectoryInfo DataSetsRootDirectory = new DirectoryInfo(@".\datasets\");
+		private static readonly DirectoryInfo ResourcesRootDirectory = 
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "resources" + Path.DirectorySeparatorChar));
 
+		private static readonly DirectoryInfo TemplatesRootDirectory = 
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "templates" + Path.DirectorySeparatorChar));
 
+		private static readonly DirectoryInfo DataSetsRootDirectory = 
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "datasets" + Path.DirectorySeparatorChar));
+
+		
 		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
