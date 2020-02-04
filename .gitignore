@@ -1,5 +1,6 @@
 wwwroot
 node_modules
+dist
 **/bin/
 **/obj/
 **/packages
