@@ -150,7 +150,7 @@ function closeDataSetPicker() {
 
 export class HomeComponent implements OnInit {
   reportName: any;
-  @ViewChild('viewer') private viewerElement: ElementRef;
+  @ViewChild('viewer', {static: false}) private viewerElement: ElementRef;
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
