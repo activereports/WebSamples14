@@ -7,8 +7,8 @@ ASP.NET Core backend.
 
 This sample requires:
  * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/) 15.7 or newer
- * [.NET Core](https://www.microsoft.com/net/download) 2.1 SDK or later.
- * [.NET Core Hosting Bundle](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/index?view=aspnetcore-2.1#install-the-net-core-hosting-bundle) (for deployment to IIS)
+ * [.NET Core](https://www.microsoft.com/net/download) 2.1 SDK.
+ * [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-2.1.15-windows-hosting-bundle-installer) (for deployment to IIS)
 
 ## Build the sample
 

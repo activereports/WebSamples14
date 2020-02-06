@@ -1,16 +1,16 @@
-# Web Designer Angular 7 sample
+# Web Designer Angular 8 sample
 
 This sample demonstrates the use of GrapeCity ActiveReports Web Designer with an
-Angular 7 app and ASP.NET Core backend.
+Angular 8 app and ASP.NET Core backend.
 
 ## System requirements
 
 This sample requires:
  * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) 16.3 or newer
- * [.NET Core](https://www.microsoft.com/net/download) 2.1 SDK or later.
- * [.NET Core Hosting Bundle](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/index?view=aspnetcore-2.1#install-the-net-core-hosting-bundle) (for deployment to IIS)
+ * [.NET Core](https://www.microsoft.com/net/download) 2.1 SDK.
+ * [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-2.1.15-windows-hosting-bundle-installer) (for deployment to IIS)
 
-Angular requires [Node.js](https://nodejs.org) 8.x or 10.x.
+Angular requires [Node.js](https://nodejs.org) 10 or later.
 
 ## Build the sample
 
