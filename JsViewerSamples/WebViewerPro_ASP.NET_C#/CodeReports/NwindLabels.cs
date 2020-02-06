@@ -74,7 +74,7 @@ namespace GrapeCity.ActiveReports.Samples.Web.CodeReports
 			table.Rows.Add(new object[] { "GODOS", "Godos Cocina Tipica", "Jose Pedro Freyre", "Sales Manager", "C/ Romero, 33", "Sevilla", null, "41101", "Spain", "(95) 555 82 82", null, });
 			table.Rows.Add(new object[] { "GOURL", "Gourmet Lanchonetes", "Andre Fonseca", "Sales Associate", "Av. Brasil, 442", "Campinas", "SP", "04876-786", "Brazil", "(11) 555-9482", null, });
 			table.Rows.Add(new object[] { "GREAL", "Great Lakes Food Market", "Howard Snyder", "Marketing Manager", "2732 Baker Blvd.", "Eugene", "OR", "97403", "USA", "(503) 555-7555", null, });
-			table.Rows.Add(new object[] { "GROSR", "GROSELLA-Restaurante", "Manuel Pereira", "Owner", "5Є Ave. Los Palos Grandes", "Caracas", "DF", "1081", "Venezuela", "(2) 283-2951", "(2) 283-3397", });
+			table.Rows.Add(new object[] { "GROSR", "GROSELLA-Restaurante", "Manuel Pereira", "Owner", "5 Ave. Los Palos Grandes", "Caracas", "DF", "1081", "Venezuela", "(2) 283-2951", "(2) 283-3397", });
 			table.Rows.Add(new object[] { "HANAR", "Hanari Carnes", "Mario Pontes", "Accounting Manager", "Rua do Paco, 67", "Rio de Janeiro", "RJ", "05454-876", "Brazil", "(21) 555-0091", "(21) 555-8765", });
 			table.Rows.Add(new object[] { "HILAA", "HILARIoN-Abastos", "Carlos Hernandez", "Sales Representative", "Carrera 22 con Ave. Carlos Soublette #8-35", "San Cristobal", "Tachira", "5022", "Venezuela", "(5) 555-1340", "(5) 555-1948", });
 			table.Rows.Add(new object[] { "HUNGC", "Hungry Coyote Import Store", "Yoshi Latimer", "Sales Representative", "City Center Plaza516 Main St.", "Elgin", "OR", "97827", "USA", "(503) 555-6874", "(503) 555-2376", });
