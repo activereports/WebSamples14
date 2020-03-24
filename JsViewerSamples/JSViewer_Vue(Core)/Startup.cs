@@ -1,8 +1,10 @@
 ﻿using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using GrapeCity.ActiveReports.Aspnetcore.Viewer;
 
 namespace JSViewerVueCore
@@ -23,11 +25,11 @@ namespace JSViewerVueCore
         {
             services
                 .AddReporting()
-                .AddMvc();
+                .AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

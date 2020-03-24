@@ -1,14 +1,17 @@
-using GrapeCity.ActiveReports.Aspnetcore.Designer;
-using GrapeCity.ActiveReports.Aspnetcore.Viewer;
+using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
-using System.IO;
-using WebDesignerAngularCore.Implementation;
+
+using GrapeCity.ActiveReports.Aspnetcore.Viewer;
+using GrapeCity.ActiveReports.Aspnetcore.Designer;
+
 using WebDesignerAngularCore.Services;
+using WebDesignerAngularCore.Implementation;
 
 namespace WebDesignerAngularCore
 {
@@ -38,8 +41,8 @@ namespace WebDesignerAngularCore
 				.AddDesigner()
 				.AddSingleton<ITemplatesService>(new FileSystemTemplates(TemplatesRootDirectory))
 				.AddSingleton<IDataSetsService>(new FileSystemDataSets(DataSetsRootDirectory))
-				.AddMvc()
-				.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+				.AddMvc(options => options.EnableEndpointRouting = false)
+				.AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
 			// In production, the Angular files will be served from this directory
 			services.AddSpaStaticFiles(configuration =>
@@ -49,7 +52,7 @@ namespace WebDesignerAngularCore
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
