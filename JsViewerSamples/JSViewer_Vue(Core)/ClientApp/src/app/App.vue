@@ -27,7 +27,7 @@ export default {
             .then(response => response.json())
             .then(result => {
                 if(result.length > 0){
-                    this.selectReport(result[0]);
+                    this.selectedReport = result[0];
                     this.reportList = result;
                 }
             })
