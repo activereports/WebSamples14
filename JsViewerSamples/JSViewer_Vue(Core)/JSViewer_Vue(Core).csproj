@@ -11,7 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.0.1429" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\JsViewerReports\*.*" LinkBase="Reports" />
