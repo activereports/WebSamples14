@@ -9,8 +9,8 @@
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.0.1429" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.0.637" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.1.1254" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="App.config" />
