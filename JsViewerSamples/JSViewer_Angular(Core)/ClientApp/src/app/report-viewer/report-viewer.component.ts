@@ -13,8 +13,7 @@ export class ReportViewerComponent {
   @Input() set reportId(reportId: string) {
       if (!this.viewer) {
           this.viewer = GrapeCity.ActiveReports.JSViewer.create({
-              element: '#viewerPlaceHolder',
-              reportID: reportId
+              element: '#viewerPlaceHolder'
           });
       }
 

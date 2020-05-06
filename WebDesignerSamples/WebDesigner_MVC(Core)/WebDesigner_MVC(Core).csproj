@@ -3,9 +3,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.0.1429" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.0.637" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.1.1254" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="App.config" />

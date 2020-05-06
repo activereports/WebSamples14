@@ -21,8 +21,10 @@ export default class App extends Component {
             .then(response => response.json())
             .then(result => {
                 if(result.length > 0){
-                    this.selectReport(result[0]);
-                    this.setState({reportsList: result});
+                    this.setState({
+                        selectedReport: result[0],
+                        reportsList: result
+                    });
                 }
             })
             .catch(e => {
