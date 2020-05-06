@@ -1,13 +1,14 @@
 using System;
-using Microsoft.AspNetCore.Builder;
+using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using GrapeCity.ActiveReports.Aspnetcore.Viewer;
-using Microsoft.Extensions.Logging;
-using System.Reflection;
 
 namespace JSViewer_AngularCore
 {
@@ -32,13 +33,12 @@ namespace JSViewer_AngularCore
                     config.ClearProviders();
 
                     // Enable logging for debug mode only
-                    if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == EnvironmentName.Development)
+                    if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
                     {
                         config.AddConsole();
                     }
                 })
-                .AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                .AddMvc(options => options.EnableEndpointRouting = false);
 
 
             // In production, the Angular files will be served from this directory
@@ -46,7 +46,7 @@ namespace JSViewer_AngularCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDeveloperExceptionPage();
 
