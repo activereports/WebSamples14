@@ -1,15 +1,16 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
 
-using GrapeCity.ActiveReports.Aspnetcore.Designer;
 using GrapeCity.ActiveReports.Aspnetcore.Viewer;
+using GrapeCity.ActiveReports.Aspnetcore.Designer;
 
-using WebDesignerMvcCore.Implementation;
 using WebDesignerMvcCore.Services;
+using WebDesignerMvcCore.Implementation;
 
 namespace WebDesignerMvcCore
 {
@@ -40,12 +41,12 @@ namespace WebDesignerMvcCore
 				.AddDesigner()
 				.AddSingleton<ITemplatesService>(new FileSystemTemplates(TemplatesRootDirectory))
 				.AddSingleton<IDataSetsService>(new FileSystemDataSets(DataSetsRootDirectory))
-				.AddMvc()
-				.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+				.AddMvc(options => options.EnableEndpointRouting = false)
+				.AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
