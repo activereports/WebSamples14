@@ -13,20 +13,6 @@ function App() {
         </reportContext.Consumer>
       </ReportProvider>
     </div>
-    // <Container fluid>
-    //   <ReportProvider>
-    //     <Row>
-    //       <Col md={2}>
-    //         <ReportList />
-    //       </Col>
-    //       <Col md={10}>
-    //         <reportContext.Consumer>
-    //         { val => <ReportViewer reportId={val?.currentReport || ''} />}
-    //         </reportContext.Consumer>
-    //       </Col>
-    //     </Row>
-    //   </ReportProvider>
-    // </Container>
   );
 }
 

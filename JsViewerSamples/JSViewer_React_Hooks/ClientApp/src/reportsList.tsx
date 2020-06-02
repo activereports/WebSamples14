@@ -24,19 +24,5 @@ export const ReportsList: React.FC = () => {
         ))}
       </ul>
     </div>
-    // <ListGroup variant="flush">
-    //   {reportProvider?.reportsList.map((report) => (
-    //     <ListGroup.Item
-    //       key={report}
-    //       action
-    //       onClick={() => {
-    //         reportProvider?.setCurrentReport(report);
-    //       }}
-    //       active={reportProvider?.currentReport === report}
-    //     >
-    //       {report}
-    //     </ListGroup.Item>
-    //   ))}
-    // </ListGroup>
   );
 };
