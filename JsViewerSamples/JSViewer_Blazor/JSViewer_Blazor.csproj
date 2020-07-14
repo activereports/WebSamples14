@@ -9,11 +9,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
   </ItemGroup>
-
+  <Target Name="ClientBuild" BeforeTargets="BeforeBuild">
+    <Exec WorkingDirectory="wwwroot" Command="npm install" />
+    <Copy SourceFiles=".\wwwroot\node_modules\@grapecity\ar-viewer\dist\jsviewer.min.css" DestinationFolder="wwwroot" />
+    <Copy SourceFiles=".\wwwroot\node_modules\@grapecity\ar-viewer\dist\jsviewer.min.js" DestinationFolder="wwwroot" />
+  </Target>
 </Project>
