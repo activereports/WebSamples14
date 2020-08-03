@@ -27,10 +27,9 @@ namespace WebDesignerAngularCore.Implementation
 
 		public TemplateInfo[] GetTemplatesList()
 		{
-			var rootFolder = _rootFolder.FullName;
-			var templatesList = Directory.GetFiles(_rootFolder.FullName, "*.*", SearchOption.TopDirectoryOnly)
-				.Where(x => Path.GetExtension(x) == ".rdlx")
-				.Select(name => name.Substring(rootFolder.Length))
+			var templatesList = _rootFolder.GetFiles("*.*", SearchOption.TopDirectoryOnly)
+				.Select(fileInfo => fileInfo.Name)
+				.Where(x => string.Equals(Path.GetExtension(x), ".rdlx", StringComparison.InvariantCultureIgnoreCase))
 				.Select(name => new TemplateInfo
 				{
 					Id = name,

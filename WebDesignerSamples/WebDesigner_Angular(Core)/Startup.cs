@@ -18,13 +18,13 @@ namespace WebDesignerAngularCore
 	public class Startup
 	{
 		private static readonly DirectoryInfo ResourcesRootDirectory = 
-			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "resources" + Path.DirectorySeparatorChar));
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "resources"));
 
 		private static readonly DirectoryInfo TemplatesRootDirectory = 
-			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "templates" + Path.DirectorySeparatorChar));
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "templates"));
 
 		private static readonly DirectoryInfo DataSetsRootDirectory = 
-			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "datasets" + Path.DirectorySeparatorChar));
+			new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "datasets"));
 
 		public Startup(IConfiguration configuration)
 		{
