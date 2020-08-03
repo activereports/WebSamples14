@@ -20,10 +20,9 @@ namespace WebDesignerAngularCore.Implementation
 
 		public object[] GetDataSetsList()
 		{
-			var rootFolder = _rootFolder.FullName;
-			var dataSetsList = Directory.GetFiles(_rootFolder.FullName, "*.*", SearchOption.TopDirectoryOnly)
-				.Where(x => Path.GetExtension(x) == DataSetExtension)
-				.Select(name => name.Substring(rootFolder.Length))
+			var dataSetsList = _rootFolder.GetFiles("*.*", SearchOption.TopDirectoryOnly)
+				.Select(fileInfo => fileInfo.Name)
+				.Where(x => string.Equals(Path.GetExtension(x), DataSetExtension, StringComparison.InvariantCultureIgnoreCase))
 				.Select(name => new {
 					Id = name,
 					Name = name.Substring(0, name.Length - DataSetExtension.Length),
