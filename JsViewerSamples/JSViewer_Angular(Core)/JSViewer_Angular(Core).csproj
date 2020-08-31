@@ -10,13 +10,13 @@
     <AspNetCoreHostingModelV2>InProcess</AspNetCoreHostingModelV2>
     <PublishToIIS>false</PublishToIIS>
     <IISVirtualDirectoryName>/JSViewer_Angular_Core/</IISVirtualDirectoryName>
-	<DefaultItemExcludes>$(DefaultItemExcludes);ClientApp\node_modules\**</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);ClientApp\node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2495" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\JsViewerReports\*.*" LinkBase="Reports" />
@@ -40,7 +40,7 @@
     <ItemGroup>
       <DistFiles Include="ClientApp\dist\**; ClientApp\dist-server\**" />
       <DistFiles Include="ClientApp\node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </ResolvedFileToPublish>

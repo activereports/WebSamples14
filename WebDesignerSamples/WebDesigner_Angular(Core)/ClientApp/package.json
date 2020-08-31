@@ -50,8 +50,8 @@
     "tslint": "~5.15.0",
     "typescript": "3.5.3",
     "webpack-dev-server": "^3.1.10",
-    "@grapecity/ar-viewer": "14.1.2117",
-    "@grapecity/ar-designer": "14.1.1254",
+    "@grapecity/ar-viewer": "14.2.2495",
+    "@grapecity/ar-designer": "14.2.1575",
     "ncp": "^2.0.0"
   },
   "optionalDependencies": {

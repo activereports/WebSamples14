@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.1.1254" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2495" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.2.1575" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="App.config" />
