@@ -5,7 +5,7 @@
     <AspNetCoreHostingModelV2>InProcess</AspNetCoreHostingModelV2>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.1.2117" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2495" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\JsViewerReports\*.*" LinkBase="Reports" />
