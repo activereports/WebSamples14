@@ -78,7 +78,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>packages\GrapeCity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>packages\GrapeCity.DataVisualization.0.1.245\lib\net462\Grapecity.DataVisualization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Gcef.Data.DataEngine, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
