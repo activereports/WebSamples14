@@ -68,7 +68,7 @@
       <HintPath>packages\GrapeCity.ActiveReports.Viewer.Win.14.2.20458\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>packages\GrapeCity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>packages\GrapeCity.DataVisualization.0.1.245\lib\net462\Grapecity.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.DpiAwareness, Version=6.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

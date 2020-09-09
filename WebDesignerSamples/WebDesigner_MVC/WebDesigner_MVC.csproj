@@ -80,7 +80,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>packages\GrapeCity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>packages\GrapeCity.DataVisualization.0.1.245\lib\net462\Grapecity.DataVisualization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Web.Viewer, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
