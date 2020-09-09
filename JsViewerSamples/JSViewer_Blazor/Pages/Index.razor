@@ -1,0 +1,61 @@
+﻿@page "/"
+@using JSViewer_Blazor.Data
+@inject ReportsService ReportsService
+@inject IJSRuntime JSRuntime;
+
+
+
+<div class="main">
+    <div class="main-nav navbar">
+        <div id="list-heading"> Select report</div>
+        @if (reportsList != null)
+        {
+            <ul id="reportsList" class="nav navbar-nav">
+                @foreach (var report in reportsList)
+                {
+                    var reportId = report;
+                    <li class="reportList_item @(CurrentReport == reportId ? "active" : "")" @onclick="()=>CurrentReport = reportId">@report</li>
+                }
+            </ul>
+        }
+    </div>
+    <div id="viewerContainer" />
+</div>
+
+
+
+
+@code {
+    private IEnumerable<string> reportsList;
+    private string _currentReport = null;
+
+
+    public string CurrentReport
+    {
+        get
+        {
+            return _currentReport;
+        }
+        set
+        {
+            _currentReport = value;
+            JSRuntime.InvokeVoidAsync("openReport", _currentReport);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        reportsList = ReportsService.GetReports();
+        _currentReport = reportsList.FirstOrDefault();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initJsViewer", "#viewerContainer");
+            CurrentReport = reportsList.FirstOrDefault();
+        }
+    }
+
+}

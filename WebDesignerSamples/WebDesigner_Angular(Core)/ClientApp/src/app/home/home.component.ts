@@ -133,7 +133,11 @@ function openDataSetPicker(options) {
 function openDataSourceEditor(options) {
   ARDataSourceEditor.open(makeOptions(options, {
     serverApi: {
-      testConnection: baseServerApi.testDataSourceConnection,
+      testConnection: function(opts) {
+        return baseServerApi.testDataSourceConnection(makeOptions(opts, {
+          reportId: GrapeCity.ActiveReports.WebDesigner.api.getReportInfo().id,
+        }));
+      },
     },
   }));
 };
