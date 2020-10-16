@@ -18,7 +18,7 @@ namespace JSViewerReactCore.Controllers
         [HttpGet("reports")]
         public ActionResult Reports()
         {
-            string[] validExtensions = {".rdl", ".rdlx", ".rdlx-master", ".rpx"};
+            string[] validExtensions = {".rdl", ".rdlx", ".rdlx-master"};
 
             var reportsList = GetEmbeddedReports(validExtensions);
             return new ObjectResult(reportsList);
