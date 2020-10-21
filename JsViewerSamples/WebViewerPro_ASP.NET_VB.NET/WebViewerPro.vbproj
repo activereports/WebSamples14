@@ -58,13 +58,13 @@
     <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>packages\GrapeCity.ActiveReports.Core.Export.Svg.Page.1.8.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
     </Reference>
-    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>packages\GrapeCity.ActiveReports.Design.Win.14.2.20458\lib\net462\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
     </Reference>
-    <Reference Include="GrapeCity.ActiveReports.Serializer, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+    <Reference Include="GrapeCity.ActiveReports.Serializer, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>packages\GrapeCity.ActiveReports.Serializer.14.2.20458\lib\net462\GrapeCity.ActiveReports.Serializer.dll</HintPath>
     </Reference>
-    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>packages\GrapeCity.ActiveReports.Viewer.Win.14.2.20458\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
