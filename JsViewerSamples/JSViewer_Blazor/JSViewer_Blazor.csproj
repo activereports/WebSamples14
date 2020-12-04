@@ -9,7 +9,7 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2495" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2655" />
   </ItemGroup>
   <Target Name="ClientBuild" BeforeTargets="BeforeBuild">
     <Exec WorkingDirectory="wwwroot" Command="npm install" />
