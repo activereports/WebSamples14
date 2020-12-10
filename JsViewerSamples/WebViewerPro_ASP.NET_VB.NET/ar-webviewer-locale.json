@@ -250,6 +250,7 @@
     }
   },
   "exportpdf": {
+    "application": "ActiveReports 14",
     "friendlyName": "PDF (*.pdf)",
     "settings": {
       "Title": {
@@ -651,15 +652,23 @@
   },
   "jsviewer": {
     "errors": {
-      "UnsupportedReportType": "Requested report type is unsupported",
-      "InvalidReportFormat": "Report format is Invalid",
       "bad-response-delayed": "Bad response delayed content",
       "bad-response-doc": "Bad response export content",
       "bad-response-report": "Bad response export content",
       "bad-response-toc": "Failed getting table of contents",
+      "commandTextIsEmpty": "Command text is empty.",
+      "dataSetNotFound": "A DataSet {{dataSetName}} referenced in the report could not be found.",
+      "dataSetNotSpecified": "DataSet name needs to be specified in the Fixed Page Layout settings.",
+      "datasourceMissingElement": "Missing a required element in {{datasourceName}} shared data source XML document.",
       "export-report": "Export report error.",
-      "http": "Response Error {{status}}: {{error}}",
+      "ie-no-pdf-addon": "To enable printing for IE, please install and enable a PDF reader add-on.",
       "ignore-disposition": "It is expected that the content will be displayed as embedded in the browser, but this will be ignored.",
+      "infinitePages": "Endless loop detected.",
+      "invalidColumnSpacing": "When Page (width is set in report PageSize) is divided into columns, the width of the column must be greater than zero and the column spacing.",
+      "invalidKeyInConnectionString": "Invalid key in connection string:{{invalidKey}}",
+      "InvalidReportFormat": "Report format is Invalid",
+      "invalidSharedDataSource": "The shared data source no longer exists or its content is invalid.",
+      "jsonDataSourceNotFound": "The json data source has not been found.",
       "no-doc": "No document loaded.",
       "no-doc-cur": "No current document!",
       "no-fmt": "Invalid format key or module for {{format}} is not loaded.",
@@ -667,14 +676,24 @@
       "no-params-render": "Cannot render (not all parameters specified)",
       "no-report": "Report not found: {{reportId}}",
       "no-toc": "No TOC content.",
+      "noDataSets": "No data sets",
+      "noLicense": "No license",
       "params-hidden": "Some hidden parameters are invalid.",
+      "print-report": "Print report error.",
+      "professionalRequired": "Professional license required.",
       "render-doc": "Failed rendering document",
       "report-open-details": "Cannot obtain report info",
       "report-open-lbl": "Failed to open report",
+      "resourceNotFound": "Unable to load resource from:{{uri}}",
+      "scriptCompilationFailed": "Script compilation failed.",
+      "subreportNotFoundError": "Unable to locate subreport: {{subName}}",
+      "subreportNotSpecified": "Subreport name is not specified for a subreport report item {{itemName}}",
+      "trialExpired": "Trial period has been expired.",
       "unknown-display": "Unknown display type {{displayType}}",
       "unknown-event": "Unknown event was not processed",
       "unknown-format": "Unsupported export type: '{{exportType}}'",
-      "unknown-response": "Unknown server response."
+      "unknown-response": "Unknown server response.",
+      "UnsupportedReportType": "Requested report type is unsupported"
     },
     "panels": {
       "export": "Export",
@@ -696,6 +715,7 @@
     "bool-false-label": "False",
     "paramsTextInvalidValue": "Invalid Value",
     "datePlaceholder": "Select Date..",
+    "daysViewHeaderFormat": "MMMM YYYY",
     "date-clear": "Clear",
     "date-today": "Today",
     "ddpTextNull": "(null)",
@@ -719,6 +739,12 @@
     "TextNoNull": "* Value cannot be null"
   },
   "viewer": {
+    "error": {
+      "details": "Details",
+      "dismiss": "Dismiss",
+      "dismiss-all": "Dismiss All"
+    },
+    "cancel-btn": "Cancel",
     "toolbar": {
       "zoom-fitwidth": "Fit to Width",
       "zoom-fitpage": "Fit Page",
@@ -740,9 +766,12 @@
     "errors": {
       "noHostElement": "Cannot find the host element."
     },
+    "progress": {
+      "page": "Page"
+    },
     "search": {
       "match-case": "Match Case",
-      "whole-word": "Whole Word",
+      "whole-word": "Whole word",
       "cancel-btn": "Cancel",
       "start-search-btn": "Search",
       "clear-btn": "Clear",
