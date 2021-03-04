@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("WebViewerPro")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("WebViewerPro")> 
-<Assembly: AssemblyCopyright("/*copyright*/")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 
 <Assembly: ComVisible(False)>
 

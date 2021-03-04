@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WebDesigner_MVC")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
