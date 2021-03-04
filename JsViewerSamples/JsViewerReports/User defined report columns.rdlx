@@ -554,7 +554,7 @@
       <Textbox Name="TextBox12">
         <CanGrow>true</CanGrow>
         <Height>0.375in</Height>
-        <Value>© 2019 GrapeCity, Inc. All Rights Reserved.</Value>
+        <Value>Copyright © 2021 GrapeCity, Inc. All Rights Reserved.</Value>
         <Style>
           <FontFamily>Gotham HTF</FontFamily>
           <FontSize>10pt</FontSize>
