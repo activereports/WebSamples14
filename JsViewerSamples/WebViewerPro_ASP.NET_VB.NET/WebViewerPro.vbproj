@@ -135,7 +135,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Chart, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
-      <HintPath>packages\GrapeCity.ActiveReports.Chart.14.2.20458\lib\net462\GrapeCity.ActiveReports.Chart.dll</HintPath>
+      <HintPath>packages\GrapeCity.ActiveReports.Chart.14.2.20717\lib\net462\GrapeCity.ActiveReports.Chart.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Document, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
