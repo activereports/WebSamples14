@@ -9,7 +9,7 @@
     <EmbeddedResource Include="..\JsViewerReports\*.*" LinkBase="Reports" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2666" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.3.2797" />
   </ItemGroup>
   <Target Name="ClientBuild" BeforeTargets="BeforeBuild">
     <Exec WorkingDirectory="ClientApp" Command="npm install" />

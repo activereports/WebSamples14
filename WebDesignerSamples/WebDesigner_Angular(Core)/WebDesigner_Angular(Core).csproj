@@ -16,8 +16,8 @@
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.2.2666" />
-    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.2.1729" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="14.3.2797" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Designer" Version="14.3.1860" />
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
