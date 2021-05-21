@@ -32,16 +32,16 @@
     <Exec WorkingDirectory="ClientApp" Command="npm install" />
     <Exec WorkingDirectory="ClientApp" Command="npm run deploy-bundles" />
   </Target>
-  <Target Name="IISBuild" AfterTargets="ComputeFilesToPublish" Condition="'$(PublishToIIS)' == 'true'">
+  <Target Name="PublishStaticFiles" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="ClientApp" Command="npm install" />
-    <Exec WorkingDirectory="ClientApp" Command="npm run build -- --base-href &quot;$(IISVirtualDirectoryName)&quot; --prod" />
-    <Exec WorkingDirectory="ClientApp" Command="npm run build:ssr -- --base-href &quot;$(IISVirtualDirectoryName)&quot; --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+    <Exec WorkingDirectory="ClientApp" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="ClientApp" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
       <DistFiles Include="ClientApp\dist\**; ClientApp\dist-server\**" />
       <DistFiles Include="ClientApp\node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </ResolvedFileToPublish>
